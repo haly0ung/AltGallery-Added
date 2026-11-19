@@ -14,6 +14,7 @@ on:
       - 'apps/One/**'
       - 'apps/INSAV/**'
       - 'apps/Mori/**'
+      - 'apps/Erosion-CN/**'
       - 'added/HGhubX/**'
       - 'assets/added-merge.toml'
       - '.github/workflows/added-apps.yml'
@@ -34,7 +35,7 @@ jobs:
       - name: Regenerate the added app sources
         run: |
           set -euo pipefail
-          for dir in apps/Gopeed apps/Cloudn apps/WQFiles apps/One apps/INSAV apps/Mori added/HGhubX; do
+          for dir in apps/Gopeed apps/Cloudn apps/WQFiles apps/One apps/INSAV apps/Mori apps/Erosion-CN added/HGhubX; do
             echo "==> Updating $dir"
             (cd "$dir" && uvx altgen -c config.toml)
           done
@@ -42,7 +43,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Merge into added-apps.json
-        run: uvx altgen merge -c assets/added-merge.toml apps/Gopeed/apps.json apps/Cloudn/apps.json apps/WQFiles/apps.json apps/One/apps.json apps/INSAV/apps.json apps/Mori/apps.json added/HGhubX/apps.json
+        run: uvx altgen merge -c assets/added-merge.toml apps/Gopeed/apps.json apps/Cloudn/apps.json apps/WQFiles/apps.json apps/One/apps.json apps/INSAV/apps.json apps/Mori/apps.json apps/Erosion-CN/apps.json added/HGhubX/apps.json
 
       # Proxy mirror for users who cannot reach GitHub: the raw files it
       # references (icons, news images) and the release ipa downloads go
