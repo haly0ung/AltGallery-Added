@@ -1,0 +1,19 @@
+# altgen merge config for the AltGallery Added source: only the apps in this
+# repo (Gopeed, Cloudn, WQFiles, One, INSAV, Mori, HGhubX), as a small standalone source that always
+# displays in full. HGhubX lives in added/ and is small-source-only.
+# Run: uvx altgen merge -c assets/added-merge.toml apps/Gopeed/apps.json apps/Cloudn/apps.json apps/WQFiles/apps.json apps/One/apps.json apps/INSAV/apps.json apps/Mori/apps.json added/HGhubX/apps.json
+#
+# Merge mode only reads [source] (root source metadata) and [output];
+# the apps and news entries are extracted from the input apps.json files.
+# Build-mode tables ([github], [app], [versions], [news]) are rejected.
+
+[source]
+name = "AltGallery Added"
+subtitle = "Apps added by haly0ung"
+description = "AltStore source with apps added by haly0ung, generated from GitHub Releases"
+icon_url = "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/assets/icon.png"
+website = "https://github.com/haly0ung/AltGallery-Added"
+tint_color = "#3B82F6"
+
+[output]
+path = "../added-apps.json"  # resolved against THIS file's directory -> repo root added-apps.json
