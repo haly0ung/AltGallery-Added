@@ -7,6 +7,25 @@
   "tintColor": "#3B82F6",
   "apps": [
     {
+      "name": "Camlo",
+      "bundleIdentifier": "com.kianuni.Camlo",
+      "developerName": "Kianuni",
+      "subtitle": "开幕 · 零门槛「滑动解锁变身 + 动态锁屏」壁纸工坊",
+      "localizedDescription": "Camlo（开幕）是一款零门槛 iOS / iPadOS 原生 Core Animation (.tendies / CAML) 动态与滑动变身锁屏制作工坊。内置 120Hz 原生 .ca 实时交互试穿、陀螺仪 3D 裸眼视差 (ParameterizedCA)、昼夜双生壁纸 (appearanceAware)、智能时钟配色字体与主屏柔焦配套、6 套内置获奖风光双态预设与 70 套零体积馆藏大师级官方云端壁纸、8 款异形粒子与体积流光特效、AI 主体抠图遮挡时钟、视频/实况抽帧无缝循环与免电脑一键直写 iOS 26 / iOS 27 锁屏画廊。",
+      "iconURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/Camlo/icon.png",
+      "tintColor": "#6B4EFF",
+      "versions": [
+        {
+          "version": "1.3.3",
+          "date": "2026-11-19T00:45:24Z",
+          "localizedDescription": "## Camlo v1.3.3 (Build 26)\n\n### 修复 SideStore / AltStore 个人免费 Apple ID 安装失败 (#6)\n- **修复 `appIdName` 非法字符报错**：感谢 `@linszx` 的精准定位！此前主 `Info.plist` 顶层 `CFBundleDisplayName` 设为 `\"开幕 Camlo\"`，导致 SideStore / AltStore（底层 `SideSign` / `AltSign`）在向苹果开发者接口 `addAppId` 注册 App ID 时因包含中文及空格而触发 `An invalid value '开幕 Camlo' was provided for the parameter 'appIdName'` 安装失败。\n- **纯 ASCII 顶层名称 + 原生 `InfoPlist.strings` 本地化**：现已将主 `Info.plist` 顶层 `CFBundleDisplayName` 与 `apps.json` `name` 统一改为纯 ASCII 的 `\"Camlo\"`，同时启用 `LSHasLocalizedDisplayName` 并通过 `InfoPlist.xcstrings` 生成 `zh-Hans.lproj/InfoPlist.strings` 与 `en.lproj/InfoPlist.strings`——SideStore / AltStore 个人免费签可顺利完成 App ID 注册并保留 `App Group` 权限，简体中文桌面图标仍优雅显示为 **「开幕 Camlo」**。\n- 完整继承 `v1.3.2` 对 iPhone Duo 折叠屏 `retinaMultiplier` 与内屏偏移的修复、10 套原创「次元 3D」二次元交互云端包与金库旧包自动原地自愈。\n\n### Fix SideStore / AltStore Free Apple ID Installation Failure (#6)\n- **Fixed `appIdName` Validation Error**: Thanks to `@linszx` for the detailed root-cause report! SideStore / AltStore pass the top-level `Info.plist` `CFBundleDisplayName` directly to Apple's `addAppId` Developer Portal API, which rejects non-ASCII characters (`\"开幕 Camlo\"`).\n- **Pure ASCII Bundle Display Name + Localized `InfoPlist.strings`**: Top-level `CFBundleDisplayName` and `apps.json` `name` are now `\"Camlo\"`, while `zh-Hans.lproj/InfoPlist.strings` (via `InfoPlist.xcstrings` + `LSHasLocalizedDisplayName = true`) preserves the localized Chinese Home Screen label (`\"开幕 Camlo\"`). Free Apple ID sideloading via SideStore / AltStore now registers seamlessly with `App Group` entitlements preserved.\n- Includes all `v1.3.2` iPhone Duo scaling/centering fixes, 10 official 3D Anime Cloud packs, and automatic Vault self-healing.\n\n> ⚠️ **iOS Compatibility Reminder**: On-device Computer-Free Direct Write supports **iOS / iPadOS 26.0 – 27.3 beta 1** (Apple patched `worse_query` in `27.3 beta 2`). Creation, 120Hz preview, and `.tendies` export continue to work on all versions.",
+          "downloadURL": "https://github.com/Kianuni/Camlo/releases/download/v1.3.3/Camlo_v1.3.3_Bilingual.ipa",
+          "size": 9541240,
+          "minOSVersion": "26.0"
+        }
+      ]
+    },
+    {
       "name": "Cloudn",
       "bundleIdentifier": "com.mengangs.Cloudn",
       "developerName": "mengangs",
@@ -178,6 +197,17 @@
       "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/added/HGhubX/images/news.png",
       "notify": true,
       "url": "https://github.com/zxsos/HGhubX/releases/tag/v2.2.2"
+    },
+    {
+      "appID": "com.kianuni.Camlo",
+      "title": "Camlo 1.3.3 · 19 Nov 2026",
+      "identifier": "Camlo-release-v1.3.3",
+      "caption": "Camlo 1.3.3 is available.",
+      "date": "2026-11-19T00:45:24Z",
+      "tintColor": "#6B4EFF",
+      "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/Camlo/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Kianuni/Camlo/releases/tag/v1.3.3"
     },
     {
       "appID": "com.jbdotparty.Erosion",
