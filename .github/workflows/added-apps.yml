@@ -45,7 +45,14 @@ jobs:
 
       - name: Merge into added-apps.json
         run: uvx altgen merge -c assets/added-merge.toml apps/Gopeed/apps.json apps/Cloudn/apps.json apps/WQFiles/apps.json apps/One/apps.json apps/INSAV/apps.json apps/Mori/apps.json apps/Erosion-CN/apps.json apps/Camlo/apps.json added/HGhubX/apps.json
-
+      # altgen does not emit a root identifier or sourceURL, but the AltStore
+      # source format (and TrollStore, which reads the same format) requires
+      # both — without identifier TrollStore rejects the source as an invalid
+      # connection. Inject them before the proxy mirror is generated, so the
+      # proxy's sourceURL points at the proxy URL automatically.
+      - name: Add TrollStore-required source fields
+        run: python3 tools/add_source_fields.py added-apps.json
+        
       # Proxy mirror for users who cannot reach GitHub: the raw files it
       # references (icons, news images) and the release ipa downloads go
       # through gh-proxy.com. Regenerated from scratch on every run.
