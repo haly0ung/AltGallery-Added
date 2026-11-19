@@ -1,0 +1,6 @@
+# render_news.py config: python3 tools/render_news.py --out apps/Gopeed
+# Colors are auto-derived: tint from config.toml, background as a light
+# shade of the icon's dominant color.
+
+name = "Gopeed"
+tagline = "Fast, modern download manager"

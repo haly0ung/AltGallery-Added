@@ -1,0 +1,38 @@
+# altgen config for the Gopeed AltStore source.
+# Run: uvx altgen -c config.toml
+# Gopeed: fast, modern download manager for HTTP, BitTorrent, Magnet, and ed2k
+
+[github]
+repo = "GopeedLab/gopeed"
+
+[source]
+name = "Gopeed"
+subtitle = "Gopeed AltStore source by AltGallery & AltGen"
+description = "Auto-updated AltStore source for Gopeed"
+icon_url = "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/Gopeed/icon.png"
+website = "https://github.com/GopeedLab/gopeed"
+tint_color = "#5DC76C"
+
+[app]
+name = "Gopeed"
+bundle_identifier = "com.gopeed.gopeed"
+developer_name = "GopeedLab"
+subtitle = "Fast, modern download manager"
+description = "A fast, modern download manager for HTTP, BitTorrent, Magnet, and ed2k. Cross-platform, built with Golang and Flutter."
+icon_url = "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/Gopeed/icon.png"
+tint_color = "#5DC76C"
+min_os_version = "13.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# Each release contains a single iOS ipa: Gopeed-v<version>-ios.ipa
+asset_pattern = '.*-ios\.ipa$'
+
+[news]
+title_template = "{name} {version} · {date}"
+# shared promo image rendered by tools/render_news.py
+image_url = "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/Gopeed/images/news.png"
+
+[output]
+path = "apps.json"
