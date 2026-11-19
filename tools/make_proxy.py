@@ -108,6 +108,17 @@ def main() -> int:
     counter = [0]
     proxied = rewrite(source, args.prefix, counter)
 
+    # The proxy mirror lives at its own URL, so point its sourceURL at
+    # itself: the output filename in place of the input filename, then the
+    # proxy prefix. Without this, a client that refreshes via sourceURL
+    # re-fetches the non-proxy file (direct github.com download links,
+    # unreachable from phones that need the proxy) instead of this mirror.
+    # (added-apps.json -> added-apps-proxy.json; all-apps.json ->
+    # all-apps-proxy.json.)
+    if isinstance(proxied, dict) and isinstance(source.get("sourceURL"), str):
+        src_url = source["sourceURL"]
+        proxied["sourceURL"] = args.prefix + src_url.rsplit("/", 1)[0] + "/" + args.output.name
+
     args.output.write_text(
         json.dumps(proxied, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
