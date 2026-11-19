@@ -1,0 +1,17 @@
+# render_news.py config: python3 tools/render_news.py --out apps/One
+# Colors left unset are auto-derived: tint from config.toml, background as
+# a light shade of the icon's dominant color.
+
+name = "One"
+tagline = "ONE 一个原生 iOS 客户端"
+
+# Color notes — each key below controls one element of the image. All are
+# optional: unset keys are auto-derived.
+[colors]
+# tint = ""          # NEW UPDATE badge + top-left glow (default: [app] tint_color)
+# tint_alt = ""      # bottom-right glow (default: [source] tint_color)
+# background = ""    # gradient base (derived from the icon's dominant color)
+# bg_mid = ""        # gradient mid stop (derived from background)
+# bg_dark = ""       # gradient end stop (derived from background)
+# text_color = ""    # app name (auto white/black)
+# tagline_color = "" # tagline text (derived from background)
