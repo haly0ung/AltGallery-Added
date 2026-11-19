@@ -1,7 +1,7 @@
 # altgen merge config for the AltGallery Added source: only the apps in this
-# repo (Gopeed, Cloudn, WQFiles, One, INSAV, Mori, HGhubX), as a small standalone source that always
+# repo (Gopeed, Cloudn, WQFiles, One, INSAV, Mori, Erosion-CN, HGhubX), as a small standalone source that always
 # displays in full. HGhubX lives in added/ and is small-source-only.
-# Run: uvx altgen merge -c assets/added-merge.toml apps/Gopeed/apps.json apps/Cloudn/apps.json apps/WQFiles/apps.json apps/One/apps.json apps/INSAV/apps.json apps/Mori/apps.json added/HGhubX/apps.json
+# Run: uvx altgen merge -c assets/added-merge.toml apps/Gopeed/apps.json apps/Cloudn/apps.json apps/WQFiles/apps.json apps/One/apps.json apps/INSAV/apps.json apps/Mori/apps.json apps/Erosion-CN/apps.json added/HGhubX/apps.json
 #
 # Merge mode only reads [source] (root source metadata) and [output];
 # the apps and news entries are extracted from the input apps.json files.
