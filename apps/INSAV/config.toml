@@ -1,0 +1,38 @@
+# altgen config for the INSAV AltStore source.
+# Run: uvx altgen -c config.toml
+# INSAV: insav 原生 iOS 客户端
+
+[github]
+repo = "ios151/Insav-releases"
+
+[source]
+name = "INSAV"
+subtitle = "INSAV AltStore source by AltGallery & AltGen"
+description = "Auto-updated AltStore source for INSAV"
+icon_url = "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/INSAV/icon.png"
+website = "https://github.com/ios151/Insav-releases"
+tint_color = "#E11D48"
+
+[app]
+name = "INSAV"
+bundle_identifier = "com.ios151.insav"
+developer_name = "ios151"
+subtitle = "insav 原生 iOS 客户端"
+description = "INSAV 是 insav 的第三方原生 iOS 客户端（SwiftUI，iOS 16+，iPhone / iPad 通用）。四个站点（主站 / 无码站 / 动漫站 / 4K 站）完整适配，浏览 / 搜索 / 系统原生播放（画中画、AirPlay）/ 外部播放器 / 整部下载离线观看 / 登录、收藏、订阅。安装包是未签名的，由商店用你自己的 Apple ID 签名。"
+icon_url = "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/INSAV/icon.png"
+tint_color = "#E11D48"
+min_os_version = "16.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# Each release contains: Insav-unsigned.ipa
+asset_pattern = 'Insav-unsigned\.ipa$'
+
+[news]
+title_template = "{name} {version} · {date}"
+# shared promo image rendered by tools/render_news.py
+image_url = "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/INSAV/images/news.png"
+
+[output]
+path = "apps.json"
