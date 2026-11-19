@@ -286,5 +286,7 @@
       "notify": true,
       "url": "https://github.com/GopeedLab/gopeed/releases/tag/v1.9.3"
     }
-  ]
+  ],
+  "identifier": "com.haly0ung.altgallery-added",
+  "sourceURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/master/added-apps.json"
 }
