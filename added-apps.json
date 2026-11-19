@@ -1,0 +1,225 @@
+{
+  "name": "AltGallery Added",
+  "subtitle": "Apps added by haly0ung",
+  "description": "AltStore source with apps added by haly0ung, generated from GitHub Releases",
+  "iconURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/assets/icon.png",
+  "website": "https://github.com/haly0ung/AltGallery-Added",
+  "tintColor": "#3B82F6",
+  "apps": [
+    {
+      "name": "Cloudn",
+      "bundleIdentifier": "com.mengangs.Cloudn",
+      "developerName": "mengangs",
+      "subtitle": "Paste a link, and let it handle the rest",
+      "localizedDescription": "Paste a link and let it handle the rest. Cloud drive shares, short videos, web videos, GitHub, and magnet links — one app to parse, preview, and download fast. Free and open source, no ads, no server; all parsing happens on-device.",
+      "iconURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/Cloudn/icon.png",
+      "tintColor": "#B4532F",
+      "versions": [
+        {
+          "version": "1.4.2",
+          "date": "2026-11-14T07:41:19Z",
+          "localizedDescription": "# Cloudn 1.4.2\n\n这一版新增 SideStore / AltStore 侧载软件源支持，修复 Instagram 网页登录点「完成」卡住的问题，并带来多项稳定性、解析与性能优化。\n\n## 新增与改进\n\n- **SideStore / AltStore 软件源**：新增 [altstore.json](https://raw.githubusercontent.com/mengangs/Cloudn/main/altstore.json) 订阅源并在发版时自动更新；在「设置 › 更新 › 添加侧载软件源」中可一键添加到 SideStore / AltStore 或复制源地址。\n- **Instagram 网页登录修复**：支持从 `sessionid` 提取用户 ID 并补全 `ds_user_id`，实时合并页面 `document.cookie`，放宽非登录页重定向时的校验误判，并在未检测到登录态或校验失败时弹出明确提示。\n- **并发与稳定性优化**：加强下载与解析任务防重入保护、完善各网盘/视频解析器与分享扩展边界处理，提升列表滚动、实时活动与无障碍体验。\n\n## 安装\n\n推荐通过 SideStore / AltStore 订阅本仓库软件源直接接收更新；也可下载下方附件里的 `Cloudn-v1.4.2.ipa` 自行签名后安装（需要 iOS 17 及以上）。",
+          "downloadURL": "https://github.com/mengangs/Cloudn/releases/download/v1.4.2/Cloudn-v1.4.2.ipa",
+          "size": 9034290,
+          "minOSVersion": "17.0"
+        }
+      ]
+    },
+    {
+      "name": "Gopeed",
+      "bundleIdentifier": "com.gopeed.gopeed",
+      "developerName": "GopeedLab",
+      "subtitle": "Fast, modern download manager",
+      "localizedDescription": "A fast, modern download manager for HTTP, BitTorrent, Magnet, and ed2k. Cross-platform, built with Golang and Flutter.",
+      "iconURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/Gopeed/icon.png",
+      "tintColor": "#5DC76C",
+      "versions": [
+        {
+          "version": "1.9.3",
+          "date": "2026-03-18T12:54:20Z",
+          "localizedDescription": "<table>\r\n  <tbody>\r\n    <tr>\r\n      <td rowspan=\"4\">🪟 Windows</td>\r\n      <td rowspan=\"2\"><code>EXE</code></td>\r\n      <td>amd64</td>\r\n      <td><a href=\"https://gopeed.com/api/download?tpl=Gopeed-v1.9.3-windows-amd64.zip\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td>arm64</td>\r\n      <td><a href=\"https://gopeed.com/api/download?tpl=Gopeed-v1.9.3-windows-arm64.zip\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td rowspan=\"2\"><code>Portable</code></td>\r\n      <td>amd64</td>\r\n      <td><a href=\"https://gopeed.com/api/download?tpl=Gopeed-v1.9.3-windows-amd64-portable.zip\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td>arm64</td>\r\n      <td><a href=\"https://gopeed.com/api/download?tpl=Gopeed-v1.9.3-windows-arm64-portable.zip\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td rowspan=\"3\">🍎 MacOS</td>\r\n      <td rowspan=\"3\"><code>DMG</code></td>\r\n      <td>universal</td>\r\n      <td><a href=\"https://gopeed.com/api/download?tpl=Gopeed-v1.9.3-macos.dmg\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td>amd64</td>\r\n      <td><a href=\"https://gopeed.com/api/download?tpl=Gopeed-v1.9.3-macos-amd64.dmg\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td>arm64</td>\r\n      <td><a href=\"https://gopeed.com/api/download?tpl=Gopeed-v1.9.3-macos-arm64.dmg\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td rowspan=\"6\">🐧 Linux</td>\r\n      <td><code>Flathub</code></td>\r\n      <td>amd64</td>\r\n      <td><a href=\"https://flathub.org/apps/com.gopeed.Gopeed\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td><code>SNAP</code></td>\r\n      <td>amd64</td>\r\n      <td><a href=\"https://snapcraft.io/gopeed\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td rowspan=\"2\"><code>DEB</code></td>\r\n      <td>amd64</td>\r\n      <td><a href=\"https://gopeed.com/api/download?tpl=Gopeed-v1.9.3-linux-amd64.deb\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td>arm64</td>\r\n      <td><a href=\"https://gopeed.com/api/download?tpl=Gopeed-v1.9.3-linux-arm64.deb\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td rowspan=\"2\"><code>AppImage</code></td>\r\n      <td>amd64</td>\r\n      <td><a href=\"https://gopeed.com/api/download?tpl=Gopeed-v1.9.3-linux-amd64.AppImage\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td>arm64</td>\r\n      <td><a href=\"https://gopeed.com/api/download?tpl=Gopeed-v1.9.3-linux-arm64.AppImage\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td rowspan=\"4\">🤖 Android</td>\r\n      <td rowspan=\"4\"><code>APK</code></td>\r\n      <td>universal</td>\r\n      <td><a href=\"https://gopeed.com/api/download?tpl=Gopeed-v1.9.3-android.apk\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td>armeabi-v7a</td>\r\n      <td><a href=\"https://gopeed.com/api/download?tpl=Gopeed-v1.9.3-android-armeabi-v7a.apk\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td>arm64-v8a</td>\r\n      <td><a href=\"https://gopeed.com/api/download?tpl=Gopeed-v1.9.3-android-arm64-v8a.apk\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td>x86_64</td>\r\n      <td><a href=\"https://gopeed.com/api/download?tpl=Gopeed-v1.9.3-android-x86_64.apk\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td>📱 iOS</td>\r\n      <td><code>IPA</code></td>\r\n      <td>universal</td>\r\n      <td><a href=\"https://gopeed.com/api/download?tpl=Gopeed-v1.9.3-ios.ipa\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td>🐳 Docker</td>\r\n      <td>-</td>\r\n      <td>universal</td>\r\n      <td><a href=\"https://hub.docker.com/r/liwei2633/gopeed\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td rowspan=\"2\">💾 Qnap</td>\r\n      <td rowspan=\"2\"><code>QPKG</code></td>\r\n      <td>amd64</td>\r\n      <td><a href=\"https://gopeed.com/api/download?tpl=gopeed-v1.9.3-qnap-amd64.qpkg\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td>arm64</td>\r\n      <td><a href=\"https://gopeed.com/api/download?tpl=gopeed-v1.9.3-qnap-arm64.qpkg\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td rowspan=\"8\">🌐 Web</td>\r\n      <td rowspan=\"3\"><code>Windows</code></td>\r\n      <td>amd64</td>\r\n      <td><a href=\"https://gopeed.com/api/download?tpl=gopeed-web-v1.9.3-windows-amd64.zip\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td>arm64</td>\r\n      <td><a href=\"https://gopeed.com/api/download?tpl=gopeed-web-v1.9.3-windows-arm64.zip\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td>386</td>\r\n      <td><a href=\"https://gopeed.com/api/download?tpl=gopeed-web-v1.9.3-windows-386.zip\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td rowspan=\"2\"><code>MacOS</code></td>\r\n      <td>amd64</td>\r\n      <td><a href=\"https://gopeed.com/api/download?tpl=gopeed-web-v1.9.3-macos-amd64.zip\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td>arm64</td>\r\n      <td><a href=\"https://gopeed.com/api/download?tpl=gopeed-web-v1.9.3-macos-arm64.zip\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td rowspan=\"3\"><code>Linux</code></td>\r\n      <td>amd64</td>\r\n      <td><a href=\"https://gopeed.com/api/download?tpl=gopeed-web-v1.9.3-linux-amd64.zip\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td>arm64</td>\r\n      <td><a href=\"https://gopeed.com/api/download?tpl=gopeed-web-v1.9.3-linux-arm64.zip\">📥</a></td>\r\n    </tr>\r\n    <tr>\r\n      <td>386</td>\r\n      <td><a href=\"https://gopeed.com/api/download?tpl=gopeed-web-v1.9.3-linux-386.zip\">📥</a></td>\r\n    </tr>\r\n  </tbody>\r\n</table>\r\n\r\n# Release notes\r\n\r\n## 🆕 Features\r\n\r\n- feat: ed2k protocol support (important!!!) @monkeyWie (#1316)\r\n\r\n## 🐛 Bug Fixes\r\n\r\n- fix: non-range HTTP downloaded bytes exceeding total file size @monkeyWie (#1317)\r\n- fix: update isCreate logic for pending tasks @Roxym3 (#1314)\r\n- fix: update RPM icon path @monkeyWie (#1309)\r\n\r\n## 📖 Document\r\n\r\n- docs: migrate docs.gopeed.com links to gopeed.com/docs equivalents @copilot-swe-agent (#1311)\r\n\r\n## 🌎 Internationalization\r\n\r\n- feat(lang): Catalan language added @kayron8 (#1303)\r\n- feat(lang): update Turkish translation @Hweord (#1304)\r\n\r\n# 更新日志\r\n\r\n## 🆕 新特性\r\n\r\n- feat: ed2k 协议支持 (重大特性！！！) @monkeyWie (#1316)\r\n\r\n## 🐛 Bug Fixes\r\n\r\n- fix: 不支持断点下载的 HTTP 链接下载超出文件总大小 @monkeyWie (#1317)\r\n- fix: 更新 isCreate 逻辑用于等待中的任务 @Roxym3 (#1314)\r\n- fix: 更新 RPM 图标路径 @monkeyWie (#1309)\r\n\r\n## 📖 Document\r\n\r\n- docs: 迁移 docs.gopeed.com 链接至 gopeed.com/docs @copilot-swe-agent (#1311)\r\n\r\n## 🌎 Internationalization\r\n\r\n- feat(lang): 添加加泰罗尼亚语言 @kayron8 (#1303)\r\n- feat(lang): 更新土耳其语言 @Hweord (#1304)",
+          "downloadURL": "https://github.com/GopeedLab/gopeed/releases/download/v1.9.3/Gopeed-v1.9.3-ios.ipa",
+          "size": 27488140,
+          "minOSVersion": "13.0"
+        }
+      ]
+    },
+    {
+      "name": "HGhubX",
+      "bundleIdentifier": "com.hghubx.app",
+      "developerName": "zxsos",
+      "subtitle": "Cross-platform short-drama client",
+      "localizedDescription": "Cross-platform short-drama client built with Tauri 2, React and Rust.",
+      "iconURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/added/HGhubX/icon.png",
+      "tintColor": "#60CDFF",
+      "versions": [
+        {
+          "version": "2.2.2",
+          "date": "2026-11-19T04:39:12Z",
+          "localizedDescription": "## HGhubX 2.2.2\n\n2.2.0 之后的体验修复版本：收藏续播与新集提醒、底部进度预览、TV 启动密码，以及冷启动登录保持与移动端布局 / 键盘修复。\n\n### 新增\n\n- **收藏进度、续播与新集提醒**（#154）：收藏卡片显示上次观看进度；看完一集且有后续时从下一集开头继续；返回收藏页后台刷新集数并保留现有卡片，未看新集显示「新更 N 集」角标。\n- **TV 启动密码**（#152）：设置 → 启动密码可开启 / 修改 / 关闭四位 PIN 或立即锁定；支持遥控器数字键与屏幕键盘，连续输入不再被步骤切换清空，连续输错 5 次进入 15 秒冷却。\n\n### 改进\n\n- **底部进度预览**（#152）：横拖画面或拖动进度条统一在底部预览时间，松手才提交跳转，不再把进度条叠在画面中央。\n- **连续切集**（#156、#157）：下一集加载期间仍可继续划；同类集数提示只更新同一张卡片，不堆叠。\n- TV 解锁页移除重复副标题与底部操作说明，仅保留标题、输入提示与错误反馈。\n\n### 修复\n\n- **冷启动与账号恢复**（#156）：启动动画期间按返回只跳过动画；镜像验证暂时失败不再显示登出；账号同步 401 时同账号静默重登，身份或会话代次不符时保留原会话并提示手动处理。\n- **移动端布局与登录键盘**（#157、#163）：窄屏全宽、平板 / 桌面限宽居中；横竖屏底栏与弹层避开系统安全区；Android 标准版软键盘弹出后，密码框与「登录」按钮仍可滚到可见位置。\n\n### 验证\n\n- 集成校验全绿：前端标准版 + TV 版构建、Rust、浏览器 smoke、Playback core / extended（run 44454852498）。\n- 全平台打包成功：Windows、macOS、Linux、iOS 未签名 IPA、Android 标准版与 TV 版（run 44454856257），Android `versionCode=2002002`。\n- Android 登录键盘修复在 Android 16 手机模拟器按 320×568、360×840 dp 实测通过（#163）；TV PIN 流程由 Chromium TV 用例 14/14 覆盖，未做 TV 实机验收。\n\n### 已知限制\n\n- iOS 包为无证书构建（需自行签名侧载）；macOS 为 ad-hoc 签名。\n- Android `versionCode` 为 `2002002`；已安装更高版本号测试包（如 2.3.0 / `2003000`）的设备需先卸载再安装。\n- 收藏「新更 N 集」基线按设备本地记录，不随账号跨设备同步；新设备首次登录可能显示与旧设备不同的新集数。",
+          "downloadURL": "https://github.com/zxsos/HGhubX/releases/download/v2.2.2/HGhubX_2.2.2_ios.ipa",
+          "size": 3891126,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "INSAV",
+      "bundleIdentifier": "com.ios151.insav",
+      "developerName": "ios151",
+      "subtitle": "insav 原生 iOS 客户端",
+      "localizedDescription": "INSAV 是 insav 的第三方原生 iOS 客户端（SwiftUI，iOS 16+，iPhone / iPad 通用）。四个站点（主站 / 无码站 / 动漫站 / 4K 站）完整适配，浏览 / 搜索 / 系统原生播放（画中画、AirPlay）/ 外部播放器 / 整部下载离线观看 / 登录、收藏、订阅。安装包是未签名的，由商店用你自己的 Apple ID 签名。",
+      "iconURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/INSAV/icon.png",
+      "tintColor": "#E11D48",
+      "versions": [
+        {
+          "version": "1.3.1-6",
+          "date": "2026-11-13T05:33:07Z",
+          "localizedDescription": "## 1.3.1 (build 6)\n\n- 修复无码站打不开：无码站的域名会不定期更换，原来的自动发现方式已经失效，导致一直连不上；现在改成每次从官方的跳转页现取最新域名，换域名也能自动跟上，发现不了时提示里会说清楚卡在哪一步\n- 其余功能同 1.3.0 (5)\n\n安装包是未签名的，推荐用 LCSign（https://www.sign.lc）签名安装，也可以用自己的证书 / SideStore 等自签。",
+          "downloadURL": "https://github.com/ios151/Insav-releases/releases/download/v1.3.1-6/Insav-unsigned.ipa",
+          "size": 1634598,
+          "minOSVersion": "16.0"
+        }
+      ]
+    },
+    {
+      "name": "Mori",
+      "bundleIdentifier": "com.mori.downloader",
+      "developerName": "coflyn",
+      "subtitle": "Save anything, from anywhere.",
+      "localizedDescription": "Save videos, photos, and audio from 16 platforms with built-in media tools. No watermarks, accounts, or tracking. Everything runs locally on your device.",
+      "iconURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/Mori/icon.png",
+      "tintColor": "#27282A",
+      "versions": [
+        {
+          "version": "4.6.0",
+          "date": "2026-11-14T01:31:23Z",
+          "localizedDescription": "# What's New in Mori 4.6.0\r\n\r\n### New Features & Enhancements\r\n\r\n* **Built-in Offline & Online Tools Suite**: Dedicated utility tab featuring a live browser media sniffer (HLS & stream interception with tracker/ad filtering), offline video-to-audio extractor (WAV/MP3 via Web Audio API), client-side image converter & compressor (WebP/JPG/PNG), PDF document compressor, multi-platform username checker (20+ networks), anime scene reverse search (trace.moe), TikTok profile inspector, and shortlink resolver.\r\n* **In-App APK Updater & Direct GitHub Installs**: Direct in-app update flow for Android detecting new GitHub releases, displaying localized changelog popups across 9 languages, and downloading APKs with in-app progress ring and package installer trigger.\r\n* **Platform-Specific iOS Update Routing**: Tailored update modal for iOS detecting platform environment, calculating `.ipa` package size, and routing users directly to `.ipa` browser download or GitHub Release page.\r\n* **Template-Based Filenames & Persistent Counters (#21)**: Custom file naming patterns (`{platform}`, `{date}`, `{time}`, `{quality}`, `{num}`, `{title}`) with monotonic sequential counters per platform.\r\n* **Real-Time Download Progression (#22)**: Enhanced progress tracking for chunked streams with live byte counters, transfer speed, connection stall detection, and storage write status.\r\n* **Android MediaStore & Gallery Instant Sorting**: Scans newly downloaded media with refreshed timestamps so files appear at the top of device gallery and music apps under \"Recent\" or \"Today\".\r\n\r\n### Bug Fixes & Scraper Repairs\r\n\r\n* **YouTube Server 2 Migration**: Migrated YouTube Server 2 to `ytmp3.gl` (`api.ytmp3.gl`) for reliable MP3 and MP4 stream conversions.\r\n* **Bilibili Multi-Part Parameter Preservation (#23)**: Preserved `?p=` episode parameter when sanitizing Bilibili URLs so multi-part video links aren't deduped into part 1 during batch downloads.\r\n* **Concurrent Downloads & Wake-Lock (#24)**: Fixed Android foreground service and wake-lock terminating prematurely when multiple downloads run concurrently.\r\n* **Share History Limits (#24)**: Aligned ShareActivity history truncation with user-configured `mori_history_limit` so favorited items are preserved.\r\n* **Background State Exception (#24)**: Fixed missing `pauseAllMedia` import throwing ReferenceError when the app enters the background.\r\n* **Preview Modal Missing File Status**: Fixed false `(File missing)` status on audio and music cards by mapping audio MIME types dynamically, rendering proper music placeholders, and detecting media readiness via HTML5 audio events.\r\n* **Upstream Security Upgrade (#25)**: Upgraded `proxy-addr` to 2.0.8 resolving CVE vulnerability.\r\n\r\n### Performance & Reliability\r\n\r\n* **Stale OTA Patch Auto-Purge (#24)**: Automatically purges legacy or stale OTA scraper patches when a newer bundled core version is detected.\r\n\r\n\r\n**Full Changelog**: https://github.com/coflyn/Mori/compare/v4.5.2...v4.6.0",
+          "downloadURL": "https://github.com/coflyn/Mori/releases/download/v4.6.0/Mori-v4.6.0-iOS-Unsigned.ipa",
+          "size": 2179675,
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "One",
+      "bundleIdentifier": "com.ios151.one",
+      "developerName": "ios151",
+      "subtitle": "ONE 一个原生 iOS 客户端",
+      "localizedDescription": "ONE 一个原生 iOS 客户端，影视类内容浏览与播放。",
+      "iconURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/One/icon.png",
+      "tintColor": "#000000",
+      "versions": [
+        {
+          "version": "1.7.1-22",
+          "date": "2026-11-04T16:15:28Z",
+          "localizedDescription": "## 1.7.1 (build 22)\n\n- 修复：开着系统「旋转锁定」时，视频全屏只显示半截画面\n- 改进：竖屏视频进全屏不再被强制转成横屏，全屏画面上多了「横 / 竖」小按钮，点一下就能切换\n- 新增：搜索结果里同一个合集的多期折成一行「共 N 期」，点开展开\n\n安装包是未签名的，推荐用 LCSign（https://www.sign.lc）签名安装，也可以用自己的证书 / SideStore 等自签。",
+          "downloadURL": "https://github.com/ios151/One-releases/releases/download/v1.7.1-22/One-unsigned.ipa",
+          "size": 1692085,
+          "minOSVersion": "16.0"
+        }
+      ]
+    },
+    {
+      "name": "WQ Files",
+      "bundleIdentifier": "cz.kolbi.wqfiles",
+      "developerName": "kolbicz",
+      "subtitle": "File manager for iOS 26 and 27 (worse_query)",
+      "localizedDescription": "File browser, app data manager and cache cleaner for iOS 26 and 27, built on the worse_query sandbox technique. Browse other apps' containers, edit plists, hex and SQLite databases, and back up, restore or clear app data without a jailbreak or kernel exploit.",
+      "iconURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/WQFiles/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/WQFiles/images/home.jpeg"
+      ],
+      "tintColor": "#1E8FC7",
+      "versions": [
+        {
+          "version": "0.9.18",
+          "date": "2026-11-17T15:21:21Z",
+          "localizedDescription": "> **Requires:** iOS 26.0 – 26.7.2, or iOS 27.0 up to 27.3 beta 1. **Not supported:** iOS 27.3 beta 2 and later, where Apple patched worse_query. Tested on iOS 27.0.1, 27.2.1, 27.3 beta 1 (confirmed by a user) and 26.7.1; see [Tested devices](https://github.com/kolbicz/WQFiles#tested-devices).\n> **Needs:** a sideloading tool that keeps the App Group entitlement; see [Signing](https://github.com/kolbicz/WQFiles#signing-the-app-group) in the README.\n\n# Worse Query Files 0.9.18\n\nYour own inspectors, your own cleaning targets, and Japanese.\n\n## New\n\n- **Custom inspectors** ([#45](https://github.com/kolbicz/WQFiles/issues/45)): small JavaScript programs that show a file's contents your way. Long-press a file → **Open As → Custom Inspector…**. WQ Files ships only the runtime; the inspectors are yours.\n  - **Install:** open a `.zip` holding an inspector with WQ Files (share sheet, AirDrop, Files app), or copy its folder into **Settings → Inspectors**. Installing one with the same name again updates it.\n  - **Write one:** a folder with `manifest.json` and `inspect.js`. The script gets the file as bytes, as text and, for property lists, already parsed, and returns sections with rows or text. A `data.json` can hold your own lookup tables. Two examples and the full format are in the [README](https://github.com/kolbicz/WQFiles#custom-inspectors).\n  - **Results:** tap a value to copy it; Share sends everything as text. Script errors show with their line number.\n  - **Safe by design:** inspectors only read. A script has no access to other files, the network or the app, and is stopped after 2 seconds.\n- **Your own folders and files in the Cache Cleaner:** long-press a folder or file inside an app's data → **Add to Cache Cleaner**. Instagram, for example, keeps uploaded videos in `Library/Application Support/Instagram/VideoUpload` long after they're posted.\n  - Choose **Always Select** (selected after every scan and by Select All, like caches) or **Select by Hand** (you pick it each time). Long-press it in the Cache Cleaner to switch **Select Automatically** later, or to take it off the list.\n  - A folder is emptied (the folder itself stays), a file is deleted.\n  - Only add what the app can do without: anything it keeps there (drafts, downloads, logins) is gone once cleaned. The app's settings folders can't be added.\n  - Saved per app, so it keeps working when the app moves to a new container.\n- **Japanese** ([#69](https://github.com/kolbicz/WQFiles/pull/69)), the 14th language. Thanks to kinboy56.\n\n## Credit\n\nNew design: GpGp700. Sandbox technique: [worse_query](https://github.com/forcequitOS/worse_query) by Taj C (forcequit). Container enumeration: [KAMUI](https://github.com/murk-sus/kamui-escape) by murk-sus. Resumable scans: hhh2210. Custom inspectors idea: deltaII. Translations: iosrxwy and FrogTool (Simplified Chinese), kinboy56 (Japanese), hfip (Arabic), hooray804 (Korean), Reinascape (Russian), romlayvn-93 (Vietnamese), buraakkcayir (Turkish review). Thanks to everyone who sent screenshots and Logs. GPL-3.0-or-later.\n\nSHA-256 of WQFiles.ipa: `177b383c541f6deb04db331a8c7b5ed3ba8f574d85e24a72cb867f3699550a18`",
+          "downloadURL": "https://github.com/kolbicz/WQFiles/releases/download/v0.9.18/WQFiles.ipa",
+          "size": 2171189,
+          "minOSVersion": "26.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "com.hghubx.app",
+      "title": "HGhubX 2.2.2 · 19 Nov 2026",
+      "identifier": "HGhubX-release-v2.2.2",
+      "caption": "HGhubX 2.2.2 is available.",
+      "date": "2026-11-19T04:39:12Z",
+      "tintColor": "#60CDFF",
+      "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/added/HGhubX/images/news.png",
+      "notify": true,
+      "url": "https://github.com/zxsos/HGhubX/releases/tag/v2.2.2"
+    },
+    {
+      "appID": "cz.kolbi.wqfiles",
+      "title": "WQ Files 0.9.18 · 17 Nov 2026",
+      "identifier": "WQ Files-release-v0.9.18",
+      "caption": "WQ Files 0.9.18 is available.",
+      "date": "2026-11-17T15:21:21Z",
+      "tintColor": "#1E8FC7",
+      "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/WQFiles/images/news.png",
+      "notify": true,
+      "url": "https://github.com/kolbicz/WQFiles/releases/tag/v0.9.18"
+    },
+    {
+      "appID": "com.mengangs.Cloudn",
+      "title": "Cloudn 1.4.2 · 14 Nov 2026",
+      "identifier": "Cloudn-release-v1.4.2",
+      "caption": "Cloudn 1.4.2 is available.",
+      "date": "2026-11-14T07:41:19Z",
+      "tintColor": "#B4532F",
+      "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/Cloudn/images/news.png",
+      "notify": true,
+      "url": "https://github.com/mengangs/Cloudn/releases/tag/v1.4.2"
+    },
+    {
+      "appID": "com.mori.downloader",
+      "title": "Mori 4.6.0 · 14 Nov 2026",
+      "identifier": "Mori-release-v4.6.0",
+      "caption": "Mori 4.6.0 is available.",
+      "date": "2026-11-14T01:31:23Z",
+      "tintColor": "#27282A",
+      "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/Mori/images/news.png",
+      "notify": true,
+      "url": "https://github.com/coflyn/Mori/releases/tag/v4.6.0"
+    },
+    {
+      "appID": "com.ios151.insav",
+      "title": "INSAV 1.3.1-6 · 13 Nov 2026",
+      "identifier": "INSAV-release-v1.3.1-6",
+      "caption": "INSAV 1.3.1-6 is available.",
+      "date": "2026-11-13T05:33:07Z",
+      "tintColor": "#E11D48",
+      "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/INSAV/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ios151/Insav-releases/releases/tag/v1.3.1-6"
+    },
+    {
+      "appID": "com.ios151.one",
+      "title": "One 1.7.1-22 · 04 Nov 2026",
+      "identifier": "One-release-v1.7.1-22",
+      "caption": "One 1.7.1-22 is available.",
+      "date": "2026-11-04T16:15:28Z",
+      "tintColor": "#000000",
+      "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/One/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ios151/One-releases/releases/tag/v1.7.1-22"
+    },
+    {
+      "appID": "com.gopeed.gopeed",
+      "title": "Gopeed 1.9.3 · 18 Mar 2026",
+      "identifier": "Gopeed-release-v1.9.3",
+      "caption": "Gopeed 1.9.3 is available.",
+      "date": "2026-03-18T12:54:20Z",
+      "tintColor": "#5DC76C",
+      "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/Gopeed/images/news.png",
+      "notify": true,
+      "url": "https://github.com/GopeedLab/gopeed/releases/tag/v1.9.3"
+    }
+  ]
+}
