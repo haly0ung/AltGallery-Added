@@ -1,0 +1,39 @@
+# altgen config for the APP AltStore source.
+# Run: uvx altgen -c config.toml
+# APP: iOS 应用管理工具：脱壳、签名、搜索已下架应用、下载安装
+
+[github]
+repo = "pxx917144686/APP"
+
+[source]
+name = "APP"
+subtitle = "APP AltStore source by AltGallery & AltGen"
+description = "Auto-updated AltStore source for APP"
+icon_url = "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/APP/icon.png"
+website = "https://github.com/pxx917144686/APP"
+tint_color = "#52B788"
+
+[app]
+name = "APP"
+bundle_identifier = "app.bamboo3965.leo5976"
+developer_name = "pxx917144686"
+subtitle = "脱壳 · 签名 · 下架应用搜索 · 下载安装"
+description = "APP 是一款 iOS 应用管理工具：支持应用脱壳、签名，搜索已下架应用并下载安装。"
+icon_url = "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/APP/icon.png"
+tint_color = "#52B788"
+min_os_version = "17.4"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# asset_pattern is a regex (not glob): each release ships one ipa,
+# APP_<version>.ipa (plus an APP.zip that must NOT match).
+asset_pattern = 'APP_.*\.ipa$'
+
+[news]
+title_template = "{name} {version} · {date}"
+# shared promo image rendered by tools/render_news.py
+image_url = "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/APP/images/news.png"
+
+[output]
+path = "apps.json"
