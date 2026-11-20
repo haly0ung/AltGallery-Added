@@ -180,6 +180,30 @@
       "minOSVersion": "16.0"
     },
     {
+      "name": "i短剧",
+      "bundleIdentifier": "com.local.STV",
+      "developerName": "my-name-is-alan",
+      "subtitle": "多源短剧 · 视频 · 漫画 · Telegram 聚合播放器",
+      "localizedDescription": "i短剧是一款免费开源的 iOS 多源短剧、视频、漫画与 Telegram 聚合播放器（SwiftUI + QuickJS 插件沙箱）。",
+      "iconURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/iDuanJu/icon.png",
+      "tintColor": "#FA5371",
+      "versions": [
+        {
+          "version": "1.6b17-ios16-pad",
+          "date": "2026-11-20T14:19:35Z",
+          "localizedDescription": "i短剧 iOS 1.6b17 · iOS 16+ 侧载与平板双栏版\n\n- 修复红果取流失败：同步 gateway 0613b49 当前 Medusa 签名、服务器时间校准、健康匿名身份复用与有界端点回退。\n- 修复筛选条件：独立 551 签名；真人剧、漫剧、AI 剧分别加载面板，切换后清理旧条件，修正场景和分页去重参数。\n- Swift/Kotlin 102 组合成向量通过；Android 连续 6 集实网取流与三类筛选前两页通过；双端设备构建通过。本轮没有真机 UI 验收。\n\n包内版本为 1.6 build 17，直接发布已验证产物。IPA 未签名，最低 iOS 18，请自行重签侧载。\n\n请选择 Assets 中的 APK / IPA，不要下载 Source code。SHA-256 见附件。\n构建源码：5f7b51d332cccd115ad5b1abcab22e2bb8b7799a\n原始成功构建：https://github.com/my-name-is-alan/iDuanJu/actions/runs/44744206530",
+          "downloadURL": "https://github.com/my-name-is-alan/iDuanJu/releases/download/v1.6b17-ios16-pad/STV-1.6b17-unsigned.ipa",
+          "size": 46870433,
+          "minOSVersion": "16.0"
+        }
+      ],
+      "version": "1.6b17-ios16-pad",
+      "versionDate": "2026-11-20T14:19:35Z",
+      "size": 46870433,
+      "downloadURL": "https://github.com/my-name-is-alan/iDuanJu/releases/download/v1.6b17-ios16-pad/STV-1.6b17-unsigned.ipa",
+      "minOSVersion": "16.0"
+    },
+    {
       "name": "Mori",
       "bundleIdentifier": "com.mori.downloader",
       "developerName": "coflyn",
@@ -189,18 +213,18 @@
       "tintColor": "#27282A",
       "versions": [
         {
-          "version": "4.6.0",
-          "date": "2026-11-14T01:31:23Z",
-          "localizedDescription": "# What's New in Mori 4.6.0\r\n\r\n### New Features & Enhancements\r\n\r\n* **Built-in Offline & Online Tools Suite**: Dedicated utility tab featuring a live browser media sniffer (HLS & stream interception with tracker/ad filtering), offline video-to-audio extractor (WAV/MP3 via Web Audio API), client-side image converter & compressor (WebP/JPG/PNG), PDF document compressor, multi-platform username checker (20+ networks), anime scene reverse search (trace.moe), TikTok profile inspector, and shortlink resolver.\r\n* **In-App APK Updater & Direct GitHub Installs**: Direct in-app update flow for Android detecting new GitHub releases, displaying localized changelog popups across 9 languages, and downloading APKs with in-app progress ring and package installer trigger.\r\n* **Platform-Specific iOS Update Routing**: Tailored update modal for iOS detecting platform environment, calculating `.ipa` package size, and routing users directly to `.ipa` browser download or GitHub Release page.\r\n* **Template-Based Filenames & Persistent Counters (#21)**: Custom file naming patterns (`{platform}`, `{date}`, `{time}`, `{quality}`, `{num}`, `{title}`) with monotonic sequential counters per platform.\r\n* **Real-Time Download Progression (#22)**: Enhanced progress tracking for chunked streams with live byte counters, transfer speed, connection stall detection, and storage write status.\r\n* **Android MediaStore & Gallery Instant Sorting**: Scans newly downloaded media with refreshed timestamps so files appear at the top of device gallery and music apps under \"Recent\" or \"Today\".\r\n\r\n### Bug Fixes & Scraper Repairs\r\n\r\n* **YouTube Server 2 Migration**: Migrated YouTube Server 2 to `ytmp3.gl` (`api.ytmp3.gl`) for reliable MP3 and MP4 stream conversions.\r\n* **Bilibili Multi-Part Parameter Preservation (#23)**: Preserved `?p=` episode parameter when sanitizing Bilibili URLs so multi-part video links aren't deduped into part 1 during batch downloads.\r\n* **Concurrent Downloads & Wake-Lock (#24)**: Fixed Android foreground service and wake-lock terminating prematurely when multiple downloads run concurrently.\r\n* **Share History Limits (#24)**: Aligned ShareActivity history truncation with user-configured `mori_history_limit` so favorited items are preserved.\r\n* **Background State Exception (#24)**: Fixed missing `pauseAllMedia` import throwing ReferenceError when the app enters the background.\r\n* **Preview Modal Missing File Status**: Fixed false `(File missing)` status on audio and music cards by mapping audio MIME types dynamically, rendering proper music placeholders, and detecting media readiness via HTML5 audio events.\r\n* **Upstream Security Upgrade (#25)**: Upgraded `proxy-addr` to 2.0.8 resolving CVE vulnerability.\r\n\r\n### Performance & Reliability\r\n\r\n* **Stale OTA Patch Auto-Purge (#24)**: Automatically purges legacy or stale OTA scraper patches when a newer bundled core version is detected.\r\n\r\n\r\n**Full Changelog**: https://github.com/coflyn/Mori/compare/v4.5.2...v4.6.0",
-          "downloadURL": "https://github.com/coflyn/Mori/releases/download/v4.6.0/Mori-v4.6.0-iOS-Unsigned.ipa",
-          "size": 2179675,
+          "version": "4.6.1",
+          "date": "2026-11-20T23:42:35Z",
+          "localizedDescription": "# What's New in Mori 4.6.1\r\n\r\n### New Features & Enhancements\r\n\r\n* **Direct iOS Camera Roll Save (#27)**: Added native Photos framework integration (`saveToCameraRoll`) in AppDelegate to save downloaded videos and photos directly to iOS Camera Roll without third-party dialogs.\r\n* **Full Spanish (es) Localization (#30)**: Added complete Spanish language translation across app UI, tools, settings, and documentation.\r\n* **Chinese Share Link Extraction (#26)**: Added parser preserving extraction codes from Chinese cloud drive and media share captions (Quark, UC, Baidu, 115, Lanzou).\r\n* **Multilingual Documentation**: Added localized README and installation guides for Indonesian (`id`), Simplified Chinese (`zh-CN`), and Spanish (`es`) with interactive language switchers.\r\n* **Full i18n Key Synchronization**: Synchronized all 9 locale dictionaries to 630 translation keys and added native Android Indonesian string resources (`values-in`).\r\n\r\n### Bug Fixes & Scraper Repairs\r\n\r\n* **iOS Auto-Zoom on Input Focus (#31)**: Enforced 16px font sizing and locked viewport scale to prevent WebKit auto-zooming when tapping the input or paste bar.\r\n* **Bilibili Akamai 403 & Stream Headers (#31)**: Injected required Referer (`https://www.bilibili.com/`) and User-Agent headers on Akamai CDN streams, removed universal byte-range header to prevent broken HTTP 206 responses, and added HTML error page detection to stop saving corrupt error responses.\r\n* **Mori CLI Playlist Downloads**: Fixed playlist downloads and dynamic version resolution in `@coflyn/mori` (v1.2.2).\r\n\r\n### Performance & Reliability\r\n\r\n* **History & Gallery Memory Optimization**: Cached video thumbnails directly to disk via Filesystem, added paginated progressive rendering for large media lists, and removed redundant background scanning loops.\r\n\r\n**Full Changelog**: https://github.com/coflyn/Mori/compare/v4.6.0...v4.6.1",
+          "downloadURL": "https://github.com/coflyn/Mori/releases/download/v4.6.1/Mori-v4.6.1-iOS-Unsigned.ipa",
+          "size": 2214932,
           "minOSVersion": "14.0"
         }
       ],
-      "version": "4.6.0",
-      "versionDate": "2026-11-14T01:31:23Z",
-      "size": 2179675,
-      "downloadURL": "https://github.com/coflyn/Mori/releases/download/v4.6.0/Mori-v4.6.0-iOS-Unsigned.ipa",
+      "version": "4.6.1",
+      "versionDate": "2026-11-20T23:42:35Z",
+      "size": 2214932,
+      "downloadURL": "https://github.com/coflyn/Mori/releases/download/v4.6.1/Mori-v4.6.1-iOS-Unsigned.ipa",
       "minOSVersion": "14.0"
     },
     {
@@ -257,6 +281,17 @@
   ],
   "news": [
     {
+      "appID": "com.mori.downloader",
+      "title": "Mori 4.6.1 · 20 Nov 2026",
+      "identifier": "Mori-release-v4.6.1",
+      "caption": "Mori 4.6.1 is available.",
+      "date": "2026-11-20T23:42:35Z",
+      "tintColor": "#27282A",
+      "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/Mori/images/news.png",
+      "notify": true,
+      "url": "https://github.com/coflyn/Mori/releases/tag/v4.6.1"
+    },
+    {
       "appID": "com.hghubx.app",
       "title": "HGhubX 2.2.5 · 20 Nov 2026",
       "identifier": "HGhubX-release-v2.2.5",
@@ -266,6 +301,17 @@
       "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/added/HGhubX/images/news.png",
       "notify": true,
       "url": "https://github.com/zxsos/HGhubX/releases/tag/v2.2.5"
+    },
+    {
+      "appID": "com.local.STV",
+      "title": "i短剧 1.6b17-ios16-pad · 20 Nov 2026",
+      "identifier": "i短剧-release-v1.6b17-ios16-pad",
+      "caption": "i短剧 1.6b17-ios16-pad is available.",
+      "date": "2026-11-20T14:19:35Z",
+      "tintColor": "#FA5371",
+      "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/iDuanJu/images/news.png",
+      "notify": true,
+      "url": "https://github.com/my-name-is-alan/iDuanJu/releases/tag/v1.6b17-ios16-pad"
     },
     {
       "appID": "app.bamboo3965.leo5976",
@@ -321,17 +367,6 @@
       "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/Cloudn/images/news.png",
       "notify": true,
       "url": "https://github.com/mengangs/Cloudn/releases/tag/v1.4.2"
-    },
-    {
-      "appID": "com.mori.downloader",
-      "title": "Mori 4.6.0 · 14 Nov 2026",
-      "identifier": "Mori-release-v4.6.0",
-      "caption": "Mori 4.6.0 is available.",
-      "date": "2026-11-14T01:31:23Z",
-      "tintColor": "#27282A",
-      "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/Mori/images/news.png",
-      "notify": true,
-      "url": "https://github.com/coflyn/Mori/releases/tag/v4.6.0"
     },
     {
       "appID": "com.ios151.insav",
