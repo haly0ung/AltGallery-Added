@@ -1,0 +1,41 @@
+# altgen config for the i短剧 AltStore source.
+# Run: uvx altgen -c config.toml
+# i短剧 (iDuanJu): free open-source iOS multi-source short-drama / video /
+# comics / Telegram aggregator player (SwiftUI + QuickJS plugin sandbox).
+
+[github]
+repo = "my-name-is-alan/iDuanJu"
+
+[source]
+name = "i短剧"
+subtitle = "i短剧 AltStore source by AltGallery & AltGen"
+description = "Auto-updated AltStore source for i短剧"
+icon_url = "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/iDuanJu/icon.png"
+website = "https://github.com/my-name-is-alan/iDuanJu"
+tint_color = "#FA5371"
+
+[app]
+name = "i短剧"
+bundle_identifier = "com.local.STV"
+developer_name = "my-name-is-alan"
+subtitle = "多源短剧 · 视频 · 漫画 · Telegram 聚合播放器"
+description = "i短剧是一款免费开源的 iOS 多源短剧、视频、漫画与 Telegram 聚合播放器（SwiftUI + QuickJS 插件沙箱）。"
+icon_url = "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/iDuanJu/icon.png"
+tint_color = "#FA5371"
+min_os_version = "16.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = true
+# asset_pattern is a regex (not glob): iOS releases ship one unsigned ipa,
+# STV-<version>-unsigned.ipa. All releases are marked prerelease upstream,
+# and Android releases ship only an .apk (never matched here).
+asset_pattern = 'STV-.*\.ipa$'
+
+[news]
+title_template = "{name} {version} · {date}"
+# shared promo image rendered by tools/render_news.py
+image_url = "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/iDuanJu/images/news.png"
+
+[output]
+path = "apps.json"
