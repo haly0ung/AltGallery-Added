@@ -189,18 +189,18 @@
       "tintColor": "#FA5371",
       "versions": [
         {
-          "version": "1.6b23-lockscreen-fix",
-          "date": "2026-11-22T07:25:16Z",
-          "localizedDescription": "# i短剧 1.6b23 iOS 锁屏恢复画音同步修复版\n\n- **修复 iOS 锁屏/退后台返回后「只有声音、画面卡住 / 音画不同步」（#17）**：\n  - `MPVPlayerEngine` 监听 `didEnterBackground` / `willEnterForeground` / `didBecomeActive` 生命周期（主播放器与 TVBox 播放器同时生效）；\n  - 锁屏退后台前同步暂停并卸载 `vid`（释放 MoltenVK Metal swapchain 与 VideoToolbox 硬解会话），避免后台 GPU 限制导致画面卡死；\n  - 解锁返回前台后重建视频输出、对点播片源执行精确 `seek` 对齐音画时钟并恢复播放。\n\nIPA 为未签名包，需要自行重签后安装。Android 包使用项目现有分发签名。\n\n---\n包内版本为 1.6 build 23。IPA 未签名（最低 iOS 18），请自行重签侧载。\n\n请选择 Assets 中的 APK / IPA，不要下载 Source code。SHA-256 见附件。\n构建源码：727557374f3ded1de9f5d44b4783a20f0e9f90d5\n自动构建：https://github.com/my-name-is-alan/iDuanJu/actions/runs/44996526622",
-          "downloadURL": "https://gh-proxy.com/https://github.com/my-name-is-alan/iDuanJu/releases/download/v1.6b23-lockscreen-fix/STV-1.6b23-unsigned.ipa",
-          "size": 46934109,
+          "version": "1.6b25-auto-next-chrome",
+          "date": "2026-11-22T16:00:08Z",
+          "localizedDescription": "# i短剧 1.6b25 自动连播体验与双端增强版\n\n- **自动播放下一集保持隐藏播控（iOS，#21）**：自动连播切换分集时不再弹出顶部/底部播控栏，仅保留轻量的「第 N 集」OSD 提示，手动滑集与选集交互不变。\n- 包含 `1.6b24` 全部双端增强：Android 画中画 / 更多设置面板 / CAS GPU 锐化 / Compose 性能优化 / 演员可点击，以及 iOS 同步的倍速记忆、定时关闭、MPVKit GPU 锐化与演员可点击。\n\nIPA 为未签名包，需要自行重签后安装。Android 包使用项目现有分发签名。\n\n---\n包内版本为 1.6 build 25。IPA 未签名（最低 iOS 18），请自行重签侧载。\n\n请选择 Assets 中的 APK / IPA，不要下载 Source code。SHA-256 见附件。\n构建源码：4ac3bae241cf7314daa5bbf0ce8d27cc1225dfa6\n自动构建：https://github.com/my-name-is-alan/iDuanJu/actions/runs/45039937906",
+          "downloadURL": "https://gh-proxy.com/https://github.com/my-name-is-alan/iDuanJu/releases/download/v1.6b25-auto-next-chrome/STV-1.6b25-unsigned.ipa",
+          "size": 46957140,
           "minOSVersion": "16.0"
         }
       ],
-      "version": "1.6b23-lockscreen-fix",
-      "versionDate": "2026-11-22T07:25:16Z",
-      "size": 46934109,
-      "downloadURL": "https://gh-proxy.com/https://github.com/my-name-is-alan/iDuanJu/releases/download/v1.6b23-lockscreen-fix/STV-1.6b23-unsigned.ipa",
+      "version": "1.6b25-auto-next-chrome",
+      "versionDate": "2026-11-22T16:00:08Z",
+      "size": 46957140,
+      "downloadURL": "https://gh-proxy.com/https://github.com/my-name-is-alan/iDuanJu/releases/download/v1.6b25-auto-next-chrome/STV-1.6b25-unsigned.ipa",
       "minOSVersion": "16.0"
     },
     {
@@ -281,6 +281,17 @@
   ],
   "news": [
     {
+      "appID": "com.local.STV",
+      "title": "i短剧 1.6b25-auto-next-chrome · 22 Nov 2026",
+      "identifier": "i短剧-release-v1.6b25-auto-next-chrome",
+      "caption": "i短剧 1.6b25-auto-next-chrome is available.",
+      "date": "2026-11-22T16:00:08Z",
+      "tintColor": "#FA5371",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/iDuanJu/images/news.png",
+      "notify": true,
+      "url": "https://github.com/my-name-is-alan/iDuanJu/releases/tag/v1.6b25-auto-next-chrome"
+    },
+    {
       "appID": "app.bamboo3965.leo5976",
       "title": "APP 2.7.6 · 22 Nov 2026",
       "identifier": "APP-release-2.7.6",
@@ -301,17 +312,6 @@
       "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/added/HGhubX/images/news.png",
       "notify": true,
       "url": "https://github.com/zxsos/HGhubX/releases/tag/v2.2.7"
-    },
-    {
-      "appID": "com.local.STV",
-      "title": "i短剧 1.6b23-lockscreen-fix · 22 Nov 2026",
-      "identifier": "i短剧-release-v1.6b23-lockscreen-fix",
-      "caption": "i短剧 1.6b23-lockscreen-fix is available.",
-      "date": "2026-11-22T07:25:16Z",
-      "tintColor": "#FA5371",
-      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/iDuanJu/images/news.png",
-      "notify": true,
-      "url": "https://github.com/my-name-is-alan/iDuanJu/releases/tag/v1.6b23-lockscreen-fix"
     },
     {
       "appID": "cz.kolbi.wqfiles",
