@@ -16,18 +16,18 @@
       "tintColor": "#52B788",
       "versions": [
         {
-          "version": "2.7.4",
-          "date": "2026-11-21T09:26:56Z",
-          "localizedDescription": "### 新增\r\n- 新增：独立的脱壳功能，标签页。\r\n\r\n<img width=\"1320\" height=\"2868\" alt=\"image\" src=\"https://github.com/user-attachments/assets/cd42423c-adbd-4aca-880d-7000c8e6f399\" />",
-          "downloadURL": "https://gh-proxy.com/https://github.com/pxx917144686/APP/releases/download/2.7.4/APP_2.7.4.ipa",
-          "size": 51620712,
+          "version": "2.7.5",
+          "date": "2026-11-22T01:00:48Z",
+          "localizedDescription": "### 新增\r\n- 操作声音功能和开关\r\n\r\n### 修改\r\n- 修改解决：签名功能-导入证书文件问题",
+          "downloadURL": "https://gh-proxy.com/https://github.com/pxx917144686/APP/releases/download/2.7.5/APP_2.7.5.ipa",
+          "size": 51685905,
           "minOSVersion": "17.4"
         }
       ],
-      "version": "2.7.4",
-      "versionDate": "2026-11-21T09:26:56Z",
-      "size": 51620712,
-      "downloadURL": "https://gh-proxy.com/https://github.com/pxx917144686/APP/releases/download/2.7.4/APP_2.7.4.ipa",
+      "version": "2.7.5",
+      "versionDate": "2026-11-22T01:00:48Z",
+      "size": 51685905,
+      "downloadURL": "https://gh-proxy.com/https://github.com/pxx917144686/APP/releases/download/2.7.5/APP_2.7.5.ipa",
       "minOSVersion": "17.4"
     },
     {
@@ -189,18 +189,18 @@
       "tintColor": "#FA5371",
       "versions": [
         {
-          "version": "1.6b20-cover-performance",
-          "date": "2026-11-21T10:32:46Z",
-          "localizedDescription": "# i短剧 1.6b20 详情页渲染修复版\n\n- 详情页首屏背景使用降采样图参与模糊，避免高分辨率封面拖慢滚动。\n- 保留海报卡片的原始清晰度。\n- 延续上一版的横竖屏切换和详情页状态更新优化。\n\nIPA 为未签名包，需要自行重签后安装。Android 包使用项目现有分发签名。\n\n---\n包内版本为 1.6 build 20。IPA 未签名（最低 iOS 18），请自行重签侧载。\n\n请选择 Assets 中的 APK / IPA，不要下载 Source code。SHA-256 见附件。\n构建源码：7b42221cd044f83d792dd7bfe7041bc7a8127043\n自动构建：https://github.com/my-name-is-alan/iDuanJu/actions/runs/44893381047",
-          "downloadURL": "https://gh-proxy.com/https://github.com/my-name-is-alan/iDuanJu/releases/download/v1.6b20-cover-performance/STV-1.6b20-unsigned.ipa",
-          "size": 46903453,
+          "version": "1.6b22-hg-novel-fix",
+          "date": "2026-11-21T19:46:10Z",
+          "localizedDescription": "# i短剧 1.6b22 红果取流与小说详情页流畅度修复版\n\n- **红果取流恢复（iOS + Android）**：同步最新 Medusa 签名兼容字段（顶层 `field 25` 非空兼容值），恢复匿名身份在 `/novel/player/multi_video_model/v1` 的连续取流（实网 6 集连测 `PPPPPP` 全部通过）。\n- **小说详情页滑动卡顿修复（iOS）**：\n  - 去掉每像素触发 `body` 重算的 `scrollY` 状态，改用阈值吸顶 `.compatOnScrolled(threshold: 210)`；\n  - `actionsOut` 浮动栏状态切换增加变更守卫，避免每帧触发弹簧动画；\n  - 离线已缓章节数改为单次目录扫描 + 后台线程异步计算，消除滑动时主线程同步 SHA256 与数千次磁盘 `stat()`；\n  - 顶部模糊封面改用降采样 `CoverView(maxPixelSize: 320)`。\n\nIPA 为未签名包，需要自行重签后安装。Android 包使用项目现有分发签名。\n\n---\n包内版本为 1.6 build 22。IPA 未签名（最低 iOS 18），请自行重签侧载。\n\n请选择 Assets 中的 APK / IPA，不要下载 Source code。SHA-256 见附件。\n构建源码：964678ec1634af66705ca4c0e2f561ae1771d88c\n自动构建：https://github.com/my-name-is-alan/iDuanJu/actions/runs/44940859952",
+          "downloadURL": "https://gh-proxy.com/https://github.com/my-name-is-alan/iDuanJu/releases/download/v1.6b22-hg-novel-fix/STV-1.6b22-unsigned.ipa",
+          "size": 46928675,
           "minOSVersion": "16.0"
         }
       ],
-      "version": "1.6b20-cover-performance",
-      "versionDate": "2026-11-21T10:32:46Z",
-      "size": 46903453,
-      "downloadURL": "https://gh-proxy.com/https://github.com/my-name-is-alan/iDuanJu/releases/download/v1.6b20-cover-performance/STV-1.6b20-unsigned.ipa",
+      "version": "1.6b22-hg-novel-fix",
+      "versionDate": "2026-11-21T19:46:10Z",
+      "size": 46928675,
+      "downloadURL": "https://gh-proxy.com/https://github.com/my-name-is-alan/iDuanJu/releases/download/v1.6b22-hg-novel-fix/STV-1.6b22-unsigned.ipa",
       "minOSVersion": "16.0"
     },
     {
@@ -264,22 +264,55 @@
       "tintColor": "#1E8FC7",
       "versions": [
         {
-          "version": "0.9.19",
-          "date": "2026-11-20T01:16:50Z",
-          "localizedDescription": "> **Requires:** iOS 26.0 – 26.7.2, or iOS 27.0 up to 27.3 beta 1. **Not supported:** iOS 27.3 beta 2 and later, where Apple patched worse_query. Tested on iOS 27.0.1, 27.2.1, 27.3 beta 1 (confirmed by a user) and 26.7.1; see [Tested devices](https://github.com/kolbicz/WQFiles#tested-devices).\n> **Needs:** a sideloading tool that keeps the App Group entitlement; see [Signing](https://github.com/kolbicz/WQFiles#signing-the-app-group) in the README.\n\n# Worse Query Files 0.9.19\n\nA small fix release, plus optional App Store icons.\n\n## New\n\n- **Settings → App Store Icons** (off by default): other apps' icons can't be read with worse_query, so WQ Files can fetch them from Apple's public App Store lookup instead. This sends the bundle ids of your installed apps and your region to Apple. Sideloaded apps and apps that were removed from the App Store keep the placeholder. Icons are stored in WQ Files (about 7 KB each, not backed up); turning the setting off deletes them.\n\n## Fixed\n\n- **Apps with one-word bundle ids** like Pinterest (`pinterest`) showed \"container identity unavailable\" and 0 KB, and couldn't be opened, backed up or cleared. They work now.\n- **App icons:** other apps' icons can't be read with worse_query, so they show a placeholder. Third-party apps now all get the neutral one, instead of misleading guesses like the Books icon for Facebook or the Music icon for TikTok. Apple services that iOS only gives a placeholder for no longer show iOS's grey grid in dark mode.\n- **Apps list on iOS 27:** the header above the list (number of apps and their size) showed as an empty band, leaving a large gap. It shows its text again, with less space above it.\n- **iOS 27 beta 5 / public beta 3** ([#70](https://github.com/kolbicz/WQFiles/issues/70)): after swiping back from App Backups, the first row on the Backups tab stopped responding. It keeps working now. The blurred band under the bar can still look too tall on that beta; that's an iOS bug. Release versions of iOS aren't affected.\n\n## Credit\n\nNew design: GpGp700. Sandbox technique: [worse_query](https://github.com/forcequitOS/worse_query) by Taj C (forcequit). Container enumeration: [KAMUI](https://github.com/murk-sus/kamui-escape) by murk-sus. Resumable scans: hhh2210. Custom inspectors idea: deltaII. Translations: iosrxwy and FrogTool (Simplified Chinese), kinboy56 (Japanese), hfip (Arabic), hooray804 (Korean), Reinascape (Russian), romlayvn-93 (Vietnamese), buraakkcayir (Turkish review). Thanks to control0forver for testing four debug builds, and to everyone who sent screenshots and Logs. GPL-3.0-or-later.\n\nSHA-256 of WQFiles.ipa: `32a0821d16b4ddedcc7b2063f90530952a644308009db0522c618c23233cacca`",
-          "downloadURL": "https://gh-proxy.com/https://github.com/kolbicz/WQFiles/releases/download/v0.9.19/WQFiles.ipa",
-          "size": 2182170,
+          "version": "0.9.20",
+          "date": "2026-11-21T21:41:37Z",
+          "localizedDescription": "> **Requires:** iOS 26.0 – 26.7.2, or iOS 27.0 up to 27.3 beta 1. **Not supported:** iOS 27.3 beta 2 and later, where Apple patched worse_query. Tested on iOS 27.0.1, 27.2.1, 27.3 beta 1 (confirmed by a user) and 26.7.1; see [Tested devices](https://github.com/kolbicz/WQFiles#tested-devices).\n> **Needs:** a sideloading tool that keeps the App Group entitlement; see [Signing](https://github.com/kolbicz/WQFiles#signing-the-app-group) in the README.\n\n# Worse Query Files 0.9.20\n\nApps Manager backups, and safer handling of databases that are in use.\n\n## New\n\n- **Import Apps Manager backups** ([#19](https://github.com/kolbicz/WQFiles/issues/19)): **Apps** → tap the app → **Import as Backup…** now accepts `.adbk` files from Apps Manager. The app's data is saved as a normal WQ Files backup, ready to restore.\n  - Only the app's own data folder is imported. App Group data in the file isn't, because WQ Files backups don't include App Groups. The keychain items Apps Manager saves are encrypted, so they can't be imported either. When you import, WQ Files lists what it left out.\n  - If the file says it belongs to a different app than the one you tapped, WQ Files asks first, as with any other import.\n  - Opening an `.adbk` from the Files app or the share sheet doesn't start an import; start it from Apps.\n\n## Fixed\n\n- **Files another app is using:** deleting or replacing them, for example an app's database in its App Group while the app runs, failed with \"Resource temporarily unavailable (errno 35)\". WQ Files now says another app is using the file and that quitting that app and trying again should work. Its extensions or widgets can keep the file open even after you quit it.\n- **Databases in use stay intact:** an app's database comes with `-wal` and `-shm` files next to it, and while the app runs, iOS doesn't lock the `-wal` file. WQ Files could delete or replace it while refusing the database file, which lost the app's newest data. Now a database and its `-wal`, `-shm` and `-journal` files are only changed together: if one of them is in use, none of them is touched. This applies to deleting (also whole folders), replacing on import and editing.\n- **Deleting or importing several files at once:** each database is handled before its `-wal` and `-shm` files, which are skipped if the database itself couldn't be deleted or replaced. \"N of M files were imported\" is translated now.\n\n## Credit\n\nNew design: GpGp700. Sandbox technique: [worse_query](https://github.com/forcequitOS/worse_query) by Taj C (forcequit). Container enumeration: [KAMUI](https://github.com/murk-sus/kamui-escape) by murk-sus. Resumable scans: hhh2210. Custom inspectors idea: deltaII. Translations: iosrxwy and FrogTool (Simplified Chinese), kinboy56 (Japanese), hfip (Arabic), hooray804 (Korean), Reinascape (Russian), romlayvn-93 (Vietnamese), buraakkcayir (Turkish review). Thanks to braless for the Apps Manager sample, and to everyone who sent screenshots and Logs. GPL-3.0-or-later.\n\nSHA-256 of WQFiles.ipa: `9ddfa3c1ff01de4d76f601d3b6b76390436136d529f029b9bfaa48c501cfe197`",
+          "downloadURL": "https://gh-proxy.com/https://github.com/kolbicz/WQFiles/releases/download/v0.9.20/WQFiles.ipa",
+          "size": 2199929,
           "minOSVersion": "26.0"
         }
       ],
-      "version": "0.9.19",
-      "versionDate": "2026-11-20T01:16:50Z",
-      "size": 2182170,
-      "downloadURL": "https://gh-proxy.com/https://github.com/kolbicz/WQFiles/releases/download/v0.9.19/WQFiles.ipa",
+      "version": "0.9.20",
+      "versionDate": "2026-11-21T21:41:37Z",
+      "size": 2199929,
+      "downloadURL": "https://gh-proxy.com/https://github.com/kolbicz/WQFiles/releases/download/v0.9.20/WQFiles.ipa",
       "minOSVersion": "26.0"
     }
   ],
   "news": [
+    {
+      "appID": "app.bamboo3965.leo5976",
+      "title": "APP 2.7.5 · 22 Nov 2026",
+      "identifier": "APP-release-2.7.5",
+      "caption": "APP 2.7.5 is available.",
+      "date": "2026-11-22T01:00:48Z",
+      "tintColor": "#52B788",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/APP/images/news.png",
+      "notify": true,
+      "url": "https://github.com/pxx917144686/APP/releases/tag/2.7.5"
+    },
+    {
+      "appID": "cz.kolbi.wqfiles",
+      "title": "WQ Files 0.9.20 · 21 Nov 2026",
+      "identifier": "WQ Files-release-v0.9.20",
+      "caption": "WQ Files 0.9.20 is available.",
+      "date": "2026-11-21T21:41:37Z",
+      "tintColor": "#1E8FC7",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/WQFiles/images/news.png",
+      "notify": true,
+      "url": "https://github.com/kolbicz/WQFiles/releases/tag/v0.9.20"
+    },
+    {
+      "appID": "com.local.STV",
+      "title": "i短剧 1.6b22-hg-novel-fix · 21 Nov 2026",
+      "identifier": "i短剧-release-v1.6b22-hg-novel-fix",
+      "caption": "i短剧 1.6b22-hg-novel-fix is available.",
+      "date": "2026-11-21T19:46:10Z",
+      "tintColor": "#FA5371",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/iDuanJu/images/news.png",
+      "notify": true,
+      "url": "https://github.com/my-name-is-alan/iDuanJu/releases/tag/v1.6b22-hg-novel-fix"
+    },
     {
       "appID": "com.hghubx.app",
       "title": "HGhubX 2.2.6 · 21 Nov 2026",
@@ -290,28 +323,6 @@
       "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/added/HGhubX/images/news.png",
       "notify": true,
       "url": "https://github.com/zxsos/HGhubX/releases/tag/v2.2.6"
-    },
-    {
-      "appID": "com.local.STV",
-      "title": "i短剧 1.6b20-cover-performance · 21 Nov 2026",
-      "identifier": "i短剧-release-v1.6b20-cover-performance",
-      "caption": "i短剧 1.6b20-cover-performance is available.",
-      "date": "2026-11-21T10:32:46Z",
-      "tintColor": "#FA5371",
-      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/iDuanJu/images/news.png",
-      "notify": true,
-      "url": "https://github.com/my-name-is-alan/iDuanJu/releases/tag/v1.6b20-cover-performance"
-    },
-    {
-      "appID": "app.bamboo3965.leo5976",
-      "title": "APP 2.7.4 · 21 Nov 2026",
-      "identifier": "APP-release-2.7.4",
-      "caption": "APP 2.7.4 is available.",
-      "date": "2026-11-21T09:26:56Z",
-      "tintColor": "#52B788",
-      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/APP/images/news.png",
-      "notify": true,
-      "url": "https://github.com/pxx917144686/APP/releases/tag/2.7.4"
     },
     {
       "appID": "com.mori.downloader",
@@ -334,17 +345,6 @@
       "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/Camlo/images/news.png",
       "notify": true,
       "url": "https://github.com/Kianuni/Camlo/releases/tag/v1.3.4"
-    },
-    {
-      "appID": "cz.kolbi.wqfiles",
-      "title": "WQ Files 0.9.19 · 20 Nov 2026",
-      "identifier": "WQ Files-release-v0.9.19",
-      "caption": "WQ Files 0.9.19 is available.",
-      "date": "2026-11-20T01:16:50Z",
-      "tintColor": "#1E8FC7",
-      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/WQFiles/images/news.png",
-      "notify": true,
-      "url": "https://github.com/kolbicz/WQFiles/releases/tag/v0.9.19"
     },
     {
       "appID": "com.jbdotparty.Erosion",
