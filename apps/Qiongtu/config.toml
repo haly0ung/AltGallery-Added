@@ -1,0 +1,43 @@
+# altgen config for the 穷图 AltStore source.
+# Run: uvx altgen -c config.toml
+# 穷图 (Qiongtu): free open-source iOS photo editor (SwiftUI + Core Image +
+# Vision), no ads. Basic features free and on-device; AI features need your
+# own API keys. Note: release IPA is signed with the author's personal dev
+# certificate (installable only on the author's devices) — re-sign with
+# your own certificate in your signer before installing.
+
+[github]
+repo = "iam567/qiongtu"
+
+[source]
+name = "穷图"
+subtitle = "穷图 AltStore source by AltGallery & AltGen"
+description = "Auto-updated AltStore source for 穷图"
+icon_url = "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/Qiongtu/icon.png"
+website = "https://github.com/iam567/qiongtu"
+tint_color = "#FF855A"
+
+[app]
+name = "穷图"
+bundle_identifier = "com.taoo.xiutu"
+developer_name = "iam567"
+subtitle = "免费开源 · 无广告修图"
+description = "穷图是一款免费开源的 iOS 修图 App（SwiftUI + Core Image + Vision）。裁剪、调色、滤镜、美颜、美体、图层、拼图、RAW 冲洗等基础功能免费、无广告、本机完成；AI 修图等需自备 API Key。"
+icon_url = "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/Qiongtu/icon.png"
+tint_color = "#FF855A"
+min_os_version = "17.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# asset_pattern is a regex (not glob): each iOS release ships one ipa,
+# Qiongtu-v<version>.ipa. Android releases ship only an .apk (never matched here).
+asset_pattern = 'Qiongtu-v.*\.ipa$'
+
+[news]
+title_template = "{name} {version} · {date}"
+# shared promo image rendered by tools/render_news.py
+image_url = "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/Qiongtu/images/news.png"
+
+[output]
+path = "apps.json"
