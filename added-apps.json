@@ -189,18 +189,18 @@
       "tintColor": "#FA5371",
       "versions": [
         {
-          "version": "1.6b29-next-drama-cache",
-          "date": "2026-11-23T06:30:13Z",
-          "localizedDescription": "# i短剧 1.6b29 双端播完连刷推荐、进度条缩略图预览、站源缓存与 iOS 扫码修复\n\n### 双端新特性（合并 PR #25 并对齐 iOS）\n- **播完连刷推荐（iOS + Android）**：\n  - 3 级瀑布流推荐（同系列下一季 → 同分类/同标签热门 Top 8 → 通用热门），自动过滤已看与本次跳过的剧；\n  - 播完大结局弹出 3 秒倒计时推荐卡片，支持「立即播放」「换一部」「取消」，可在「更多」中随时开关；Android 大结局上滑亦可直接滑出下一部推荐。\n- **进度条拖动缩略图预览（Android 合并 PR #25，对齐 iOS）**：\n  - 横竖屏拖动进度条时拇指上方浮出对应画面缩略图 + 实时时间戳与相对偏移，自适应横/竖屏比例，HLS 自动优雅降级。\n\n### 体验修复\n- **Android 站源/插件内存缓存与下拉刷新**：从 CMS 站源、JS 插件或黄果点进详情再返回时直接复用缓存并保持选中分类与滚动位置，不再重复加载；列表顶部支持手动下拉刷新。\n- **iOS 红果短剧扫码后台恢复修复**：后台 `WKWebView` 保持可见不透明层防止切回后定时器被 WebKit 冻结，并在 WebView 内直查 `/api/pc/profile` + 监听 `scenePhase == .active` + 增加手动检查登录按钮，切回 App 秒识别登录态。\n\nIPA 为未签名包，需要自行重签后安装。Android 包使用项目现有分发签名。\n\n---\n包内版本为 1.6 build 29。IPA 未签名（最低 iOS 18），请自行重签侧载。\n\n请选择 Assets 中的 APK / IPA，不要下载 Source code。SHA-256 见附件。\n构建源码：9ca413bebf6ea8c0101f1fdfaca30ab0e035631d\n自动构建：https://github.com/my-name-is-alan/iDuanJu/actions/runs/45122693762",
-          "downloadURL": "https://github.com/my-name-is-alan/iDuanJu/releases/download/v1.6b29-next-drama-cache/STV-1.6b29-unsigned.ipa",
-          "size": 47197741,
+          "version": "1.6b30-player-hotfix",
+          "date": "2026-11-23T08:14:21Z",
+          "localizedDescription": "# i短剧 1.6b30 播放器热修（Android 黑屏无声修复 + iOS 无感切集优化）\n\n### Android 热修\n- **修复部分机型播放红果黑屏无声**：\n  - 移除双并发 `ExoPlayer`（`standbyPlayer`）与第二个 `TextureView`，改为单 `ExoPlayer` + 后台异步首帧 `Bitmap` 无缝交接，彻底消除双硬解实例抢占解码器/音频焦点的问题；\n  - `EpisodeCache` 首帧抽取改为后台异步执行，不再阻塞起播；\n  - 仅在开启超分锐化或 SDR→HDR 时才挂载 `VideoFrameProcessor` GL 管线，默认播放走原生硬件直出，并恢复 `2s / 2.5s` 安全预缓存间隔。\n\n### iOS 体验优化\n- **切集无闪烁 & 去 Toast**：\n  - 切集时保持当前播控显隐状态不变，不再强制弹出/闪烁底部进度条与播控栏，也不再清空 `tech` / `videoSize`；\n  - 移除切集时的「第 X 集」Toast 弹窗；\n  - 首帧交接增加 `90ms` 渲染缓冲（`revealedIndex`），等 `MPVMetalLayer` 送显第 0 帧后再揭开首帧图，消除切集瞬间黑闪。\n\nIPA 为未签名包，需要自行重签后安装。Android 包使用项目现有分发签名。\n\n---\n包内版本为 1.6 build 30。IPA 未签名（最低 iOS 18），请自行重签侧载。\n\n请选择 Assets 中的 APK / IPA，不要下载 Source code。SHA-256 见附件。\n构建源码：ae2560251a8325c1cb7ffbe50207b744591a738d\n自动构建：https://github.com/my-name-is-alan/iDuanJu/actions/runs/45134094130",
+          "downloadURL": "https://github.com/my-name-is-alan/iDuanJu/releases/download/v1.6b30-player-hotfix/STV-1.6b30-unsigned.ipa",
+          "size": 47198163,
           "minOSVersion": "16.0"
         }
       ],
-      "version": "1.6b29-next-drama-cache",
-      "versionDate": "2026-11-23T06:30:13Z",
-      "size": 47197741,
-      "downloadURL": "https://github.com/my-name-is-alan/iDuanJu/releases/download/v1.6b29-next-drama-cache/STV-1.6b29-unsigned.ipa",
+      "version": "1.6b30-player-hotfix",
+      "versionDate": "2026-11-23T08:14:21Z",
+      "size": 47198163,
+      "downloadURL": "https://github.com/my-name-is-alan/iDuanJu/releases/download/v1.6b30-player-hotfix/STV-1.6b30-unsigned.ipa",
       "minOSVersion": "16.0"
     },
     {
@@ -277,19 +277,43 @@
       "size": 2199929,
       "downloadURL": "https://github.com/kolbicz/WQFiles/releases/download/v0.9.20/WQFiles.ipa",
       "minOSVersion": "26.0"
+    },
+    {
+      "name": "穷图",
+      "bundleIdentifier": "com.taoo.xiutu",
+      "developerName": "iam567",
+      "subtitle": "免费开源 · 无广告修图",
+      "localizedDescription": "穷图是一款免费开源的 iOS 修图 App（SwiftUI + Core Image + Vision）。裁剪、调色、滤镜、美颜、美体、图层、拼图、RAW 冲洗等基础功能免费、无广告、本机完成；AI 修图等需自备 API Key。",
+      "iconURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/Qiongtu/icon.png",
+      "tintColor": "#FF855A",
+      "versions": [
+        {
+          "version": "0.3",
+          "date": "2026-11-22T17:48:34Z",
+          "localizedDescription": "穷图 iOS v0.3。\n\n## 新增\n- **女 / 男开关**：一键美颜、AI 美体、一键美体、发型、染发、发质发量、妆容都有男士的一套。男士 16 种发型（寸头、渐变寸、油头、锡纸烫、韩式中分……）、12 种染发色，还能修鬓角、去胡茬、修胡型、加胡子。\n- **形状**（装饰里）：矩形（可圆角、切角）、圆、多边形、星形、心形、箭头、气泡，可调颜色、描边、阴影、大小，做字幕条、标签底很方便。\n- **装饰不会被 AI 画死**：文字、贴纸、形状和图层浮在照片上面，之后再用 AI 修图，AI 只处理下面的照片。图层面板里也能看到这些装饰，点一下就能接着改。\n- **历史图库：处理步骤**。每张图可以查看从原图开始做了哪些步骤，并一键套用到新照片（AI 步骤会按原指令重新生成）。\n- **主页\"自动拼图\"**（替换了马赛克）：自动找出相册里最近一组连续截图，去掉重复部分和固定的标题栏、输入框，拼成一张长图。\n- **拼接可以推拉裁剪**：每张图的两头都有把手，拖动就能裁。\n- **涂鸦**：自动圆润（画圈变圆、线条去手抖）；妆容笔只画在识别到的五官上，笔触更淡；图案笔新增樱花、落叶、雨滴、雪花、音符，可调间距、散布、大小、角度、数量。\n- **特效随机度**：雪花、光斑、星芒这类效果每次选都重新随机，可以一键\"随机\"，还能调随机度。\n\n## 修复\n- 大师构图拍空场景（比如办公室）时不会再凭空加一个人。\n- 三分法等构图不会再把网格辅助线画进照片。\n\n## 安装\n- Release 配置编译，iOS 17+。\n- IPA 用作者的个人开发证书签名，只能装在作者登记过的设备上。**作者不提供任何签名服务**，请用你自己的证书重新签名，或者自己从源码编译。",
+          "downloadURL": "https://github.com/iam567/qiongtu/releases/download/v0.3/Qiongtu-v0.3.ipa",
+          "size": 21330361,
+          "minOSVersion": "17.0"
+        }
+      ],
+      "version": "0.3",
+      "versionDate": "2026-11-22T17:48:34Z",
+      "size": 21330361,
+      "downloadURL": "https://github.com/iam567/qiongtu/releases/download/v0.3/Qiongtu-v0.3.ipa",
+      "minOSVersion": "17.0"
     }
   ],
   "news": [
     {
       "appID": "com.local.STV",
-      "title": "i短剧 1.6b29-next-drama-cache · 23 Nov 2026",
-      "identifier": "i短剧-release-v1.6b29-next-drama-cache",
-      "caption": "i短剧 1.6b29-next-drama-cache is available.",
-      "date": "2026-11-23T06:30:13Z",
+      "title": "i短剧 1.6b30-player-hotfix · 23 Nov 2026",
+      "identifier": "i短剧-release-v1.6b30-player-hotfix",
+      "caption": "i短剧 1.6b30-player-hotfix is available.",
+      "date": "2026-11-23T08:14:21Z",
       "tintColor": "#FA5371",
       "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/iDuanJu/images/news.png",
       "notify": true,
-      "url": "https://github.com/my-name-is-alan/iDuanJu/releases/tag/v1.6b29-next-drama-cache"
+      "url": "https://github.com/my-name-is-alan/iDuanJu/releases/tag/v1.6b30-player-hotfix"
     },
     {
       "appID": "com.hghubx.app",
@@ -301,6 +325,17 @@
       "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/added/HGhubX/images/news.png",
       "notify": true,
       "url": "https://github.com/zxsos/HGhubX/releases/tag/v2.2.8"
+    },
+    {
+      "appID": "com.taoo.xiutu",
+      "title": "穷图 0.3 · 22 Nov 2026",
+      "identifier": "穷图-release-v0.3",
+      "caption": "穷图 0.3 is available.",
+      "date": "2026-11-22T17:48:34Z",
+      "tintColor": "#FF855A",
+      "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/Qiongtu/images/news.png",
+      "notify": true,
+      "url": "https://github.com/iam567/qiongtu/releases/tag/v0.3"
     },
     {
       "appID": "app.bamboo3965.leo5976",
