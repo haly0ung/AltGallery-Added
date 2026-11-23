@@ -16,18 +16,18 @@
       "tintColor": "#52B788",
       "versions": [
         {
-          "version": "2.7.6",
-          "date": "2026-11-22T12:23:00Z",
-          "localizedDescription": "### 新增\r\n- 设置-版本号\r\n\r\n### 修改\r\n- 修改解决：修改导致产生脱壳问题。",
-          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.7.6/APP_2.7.6.ipa",
-          "size": 51719504,
+          "version": "2.7.8",
+          "date": "2026-11-23T17:51:40Z",
+          "localizedDescription": "### 新增\r\n- 签名-签名证书ID-小组件、大组件WE、网络扩展NE\r\n<img width=\"1320\" height=\"2682\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f2fa7b23-ebf5-423a-9cc6-27c64a1a1e5e\" />\r\n<img width=\"1320\" height=\"925\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c531538f-4e30-4eee-b0c3-c3ef04195955\" />",
+          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.7.8/APP_2.7.8.ipa",
+          "size": 52109129,
           "minOSVersion": "17.4"
         }
       ],
-      "version": "2.7.6",
-      "versionDate": "2026-11-22T12:23:00Z",
-      "size": 51719504,
-      "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.7.6/APP_2.7.6.ipa",
+      "version": "2.7.8",
+      "versionDate": "2026-11-23T17:51:40Z",
+      "size": 52109129,
+      "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.7.8/APP_2.7.8.ipa",
       "minOSVersion": "17.4"
     },
     {
@@ -288,22 +288,44 @@
       "tintColor": "#FF855A",
       "versions": [
         {
-          "version": "0.3",
-          "date": "2026-11-22T17:48:34Z",
-          "localizedDescription": "穷图 iOS v0.3。\n\n## 新增\n- **女 / 男开关**：一键美颜、AI 美体、一键美体、发型、染发、发质发量、妆容都有男士的一套。男士 16 种发型（寸头、渐变寸、油头、锡纸烫、韩式中分……）、12 种染发色，还能修鬓角、去胡茬、修胡型、加胡子。\n- **形状**（装饰里）：矩形（可圆角、切角）、圆、多边形、星形、心形、箭头、气泡，可调颜色、描边、阴影、大小，做字幕条、标签底很方便。\n- **装饰不会被 AI 画死**：文字、贴纸、形状和图层浮在照片上面，之后再用 AI 修图，AI 只处理下面的照片。图层面板里也能看到这些装饰，点一下就能接着改。\n- **历史图库：处理步骤**。每张图可以查看从原图开始做了哪些步骤，并一键套用到新照片（AI 步骤会按原指令重新生成）。\n- **主页\"自动拼图\"**（替换了马赛克）：自动找出相册里最近一组连续截图，去掉重复部分和固定的标题栏、输入框，拼成一张长图。\n- **拼接可以推拉裁剪**：每张图的两头都有把手，拖动就能裁。\n- **涂鸦**：自动圆润（画圈变圆、线条去手抖）；妆容笔只画在识别到的五官上，笔触更淡；图案笔新增樱花、落叶、雨滴、雪花、音符，可调间距、散布、大小、角度、数量。\n- **特效随机度**：雪花、光斑、星芒这类效果每次选都重新随机，可以一键\"随机\"，还能调随机度。\n\n## 修复\n- 大师构图拍空场景（比如办公室）时不会再凭空加一个人。\n- 三分法等构图不会再把网格辅助线画进照片。\n\n## 安装\n- Release 配置编译，iOS 17+。\n- IPA 用作者的个人开发证书签名，只能装在作者登记过的设备上。**作者不提供任何签名服务**，请用你自己的证书重新签名，或者自己从源码编译。",
-          "downloadURL": "https://github.com/iam567/qiongtu/releases/download/v0.3/Qiongtu-v0.3.ipa",
-          "size": 21330361,
+          "version": "0.4",
+          "date": "2026-11-23T18:36:43Z",
+          "localizedDescription": "穷图 v0.4：iOS、Mac、安卓三个版本一起发。\n\n> ⚠️ **安卓版没有在真机上测过**：只在电脑上的模拟器里跑过，AI 功能也只用模拟服务器试过，可能有问题。\n\n## 新增\n- **Mac 版**（第一次发）：界面按电脑上的修图软件重新排过：\n  - 左边是抽屉式工具栏，中间是画布，右边是属性面板，另有常驻、可折叠的图层和历史记录面板。\n  - 打开文件或把图片拖进窗口就能编辑；RAW 文件自动进 RAW 冲洗；一次拖进多张截图自动拼接。\n  - 切换工具时自动应用当前的修改，点\"取消\"才放弃。\n  - ⌘Z / Ctrl+Z 随时撤销；点历史记录的某一步就回到那一步。\n  - 图层面板可以新建透明图层、改混合模式和不透明度。\n  - 放大镜：单击放大、⌥单击缩小、左右拖动缩放。\n  - 底部状态栏显示 AI 服务商、Key 状态和累计花费。\n- **文字竖排**：在\"排版\"里打开\"竖排\"，字从上往下写，一列写完换到左边一列，标点换成竖排的写法；行距用来调列和列之间的距离。\n- **文字框可以拉边**：横排拖右边改宽窄，竖排拖下边改高矮，字排满了自动换行或换列。\n- **输入文字时回车换行**（竖排就是换列），写完点\"完成\"。\n- **美体\"AI 补背景\"开关**（在背景保护旁边）：打开后让 AI 去掉人、补出后面的背景，人让出来的地方用它填（计一次费）；关掉就用本机的做法。\n- **自动拼图拼完进拼接页**：截图和裁剪位置已经摆好，接缝没对上的地方可以拖把手手动对齐。\n\n## 修复\n- 美体背景保护：背景在人的边缘附近会平滑过渡，不再出现两张图叠在一起的重影和糊成一片的颜色。拉得很厉害时，建议打开 AI 补背景。\n\n## 下载\n- `Qiongtu-v0.4.ipa`：iOS 17+。用作者的个人开发证书签名，只能装在作者登记过的设备上。**作者不提供任何签名服务**，请用你自己的证书重新签名，或者自己从源码编译。\n- `Qiongtu-mac-v0.4.zip`：macOS 14+。解压后把\"穷图\"拖进\"应用程序\"。这个版本没有经过苹果公证，第一次打开如果提示无法验证开发者，在\"应用程序\"里右键点它，选\"打开\"。\n- `Qiongtu-android-v0.4.apk`：Android 10+，64 位手机。调试签名的测试版，可以直接覆盖安装之前的 v0.1 / v0.3。",
+          "downloadURL": "https://github.com/iam567/qiongtu/releases/download/v0.4/Qiongtu-v0.4.ipa",
+          "size": 23151649,
           "minOSVersion": "17.0"
         }
       ],
-      "version": "0.3",
-      "versionDate": "2026-11-22T17:48:34Z",
-      "size": 21330361,
-      "downloadURL": "https://github.com/iam567/qiongtu/releases/download/v0.3/Qiongtu-v0.3.ipa",
+      "version": "0.4",
+      "versionDate": "2026-11-23T18:36:43Z",
+      "size": 23151649,
+      "downloadURL": "https://github.com/iam567/qiongtu/releases/download/v0.4/Qiongtu-v0.4.ipa",
       "minOSVersion": "17.0"
     }
   ],
   "news": [
+    {
+      "appID": "com.taoo.xiutu",
+      "title": "穷图 0.4 · 23 Nov 2026",
+      "identifier": "穷图-release-v0.4",
+      "caption": "穷图 0.4 is available.",
+      "date": "2026-11-23T18:36:43Z",
+      "tintColor": "#FF855A",
+      "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/Qiongtu/images/news.png",
+      "notify": true,
+      "url": "https://github.com/iam567/qiongtu/releases/tag/v0.4"
+    },
+    {
+      "appID": "app.bamboo3965.leo5976",
+      "title": "APP 2.7.8 · 23 Nov 2026",
+      "identifier": "APP-release-2.7.8",
+      "caption": "APP 2.7.8 is available.",
+      "date": "2026-11-23T17:51:40Z",
+      "tintColor": "#52B788",
+      "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/APP/images/news.png",
+      "notify": true,
+      "url": "https://github.com/pxx917144686/APP/releases/tag/2.7.8"
+    },
     {
       "appID": "com.local.STV",
       "title": "i短剧 1.6b30-player-hotfix · 23 Nov 2026",
@@ -325,28 +347,6 @@
       "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/added/HGhubX/images/news.png",
       "notify": true,
       "url": "https://github.com/zxsos/HGhubX/releases/tag/v2.2.8"
-    },
-    {
-      "appID": "com.taoo.xiutu",
-      "title": "穷图 0.3 · 22 Nov 2026",
-      "identifier": "穷图-release-v0.3",
-      "caption": "穷图 0.3 is available.",
-      "date": "2026-11-22T17:48:34Z",
-      "tintColor": "#FF855A",
-      "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/Qiongtu/images/news.png",
-      "notify": true,
-      "url": "https://github.com/iam567/qiongtu/releases/tag/v0.3"
-    },
-    {
-      "appID": "app.bamboo3965.leo5976",
-      "title": "APP 2.7.6 · 22 Nov 2026",
-      "identifier": "APP-release-2.7.6",
-      "caption": "APP 2.7.6 is available.",
-      "date": "2026-11-22T12:23:00Z",
-      "tintColor": "#52B788",
-      "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/APP/images/news.png",
-      "notify": true,
-      "url": "https://github.com/pxx917144686/APP/releases/tag/2.7.6"
     },
     {
       "appID": "cz.kolbi.wqfiles",
