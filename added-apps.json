@@ -16,18 +16,18 @@
       "tintColor": "#52B788",
       "versions": [
         {
-          "version": "2.8.2",
-          "date": "2026-11-25T20:09:56Z",
-          "localizedDescription": "#修改\r\n\r\n```js\r\n\r\n1.删除：灵动岛功能\r\n\r\n```",
-          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.8.2/APP_2.8.2.ipa",
-          "size": 53941374,
+          "version": "2.8.8",
+          "date": "2026-11-26T16:17:23Z",
+          "localizedDescription": "#修改\r\n\r\n```js\r\n\r\n1.改进：整体UI的细节\r\n\r\n```\r\n\r\n<img width=\"1320\" height=\"1185\" alt=\"image\" src=\"https://github.com/user-attachments/assets/816b1d04-c7a3-4fff-8478-8697c2781c89\" />",
+          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.8.8/APP_2.8.8.ipa",
+          "size": 54462701,
           "minOSVersion": "17.4"
         }
       ],
-      "version": "2.8.2",
-      "versionDate": "2026-11-25T20:09:56Z",
-      "size": 53941374,
-      "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.8.2/APP_2.8.2.ipa",
+      "version": "2.8.8",
+      "versionDate": "2026-11-26T16:17:23Z",
+      "size": 54462701,
+      "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.8.8/APP_2.8.8.ipa",
       "minOSVersion": "17.4"
     },
     {
@@ -141,18 +141,18 @@
       "tintColor": "#60CDFF",
       "versions": [
         {
-          "version": "2.2.10",
-          "date": "2026-11-24T10:16:05Z",
-          "localizedDescription": "# HGhubX v2.2.10\n\n紧急适配上游全新 `dx150-edge-v1` 四作用域加密网关修复全接口 503，并合入标签置顶、右半屏长按倍速胶囊、搜索页热门标签官网同步、网络切换静默恢复、完结剧集「全 N 集」与窄屏布局修复；覆盖 Windows、macOS、Linux、Android 与 iOS 标准版。\n\n## 新增与优化\n1. **标签页长按置顶与标签结果页标题栏置顶（#247、#252）**：在「分类 → 标签」顶部新增「置顶标签」板块，支持长按标签 600ms 切换置顶/取消（最多 24 个，横向拖动超过 10px 取消防误触）；进入任意标签结果页后，标题栏右侧新增图钉按钮一键置顶（已置顶朝下扎稳并高亮），状态保存在内容偏好 `pinnedTags` 并跨重启保留。\n2. **移动端右半屏长按倍速与顶部只读胶囊提示（#247、#251）**：长按手势取消对角线斜切与居中死区，改为直觉的左右半屏切分（右半屏 `2×` 倍速、左半屏 `0.5×` 慢放，起手延迟缩至 `260ms`，横滑 `68px` 换挡，松手即恢复不锁定）；长按激活期间在安全区顶部居中显示无 `backdrop-filter` 的只读倍速胶囊与挡位点，清屏模式下也有清晰视觉反馈。\n3. **搜索结果 / 分类 / 标签卡片完结剧集显示「全 N 集」（#248）**：已完结剧目在海报底部集数角标统一显示「全 N 集」（优先取 `total_episodes`，缺失时回退 `episode_count`），未完结剧目保持原有更新集数文案。\n\n## 修复\n1. **适配上游 `dx150-edge-v1` 四作用域加密网关，修复接口全 503（#255、#256）**：上游于 2026-11-24 下线旧统一入口 `/api/edge/request`（返回 `HTTP 503 {\"msg\":\"接口已停用\"}`）并拆分为 `/api/{public,dynamic,playback,user}/request`；客户端新增 `edge_crypto` 模块复用 `ring` 实现 ECDH P-256 + HKDF-SHA256 + AES-256-GCM 单飞会话加解密、`public` 作用域 `X-HG-Public-JSON: 1` 快速路径与 `session_expired` 自动重建，同时对未迁移镜像保留旧接口 `404`/`405` 兼容回退，并同步更新草稿代理连通性探测。\n2. **搜索页热门题材与官网首页「热门标签」同步（#250、#254）**：新增 `api_hot_tags` 直接解析官网首页 SSR `section.hg-home-popular-tags`，搜索页严格按官网热门标签集合与顺序展示，移除前端全量 `/api/tags` 重排，点「换一批」不再混入非热门普通标签，保留内容屏蔽过滤与手动刷新同步。\n3. **网络切换误报 401 与静默恢复（#246）**：修复 `edge.rs` 将 HTTP 403 折叠为 `401` 导致切网后误报登录态失效的问题；网络恢复挂起并在回到前台时强制重建客户端与自动选线，跨镜像静默重登按需刷新发布页信任，瞬时失败不再永久锁死同步，不可恢复时去重提示并提供原地「重新登录」入口。\n4. **窄屏手机中英文控件异常折行与裁切（#249）**：收紧 360px / 320px 窄屏容器下「我的关注」「我的主页」「最近上新」「热门推荐」、账号卡 `ID` 与统计行、设置页分段器及海报角标间距，修复中文两字断行与英文按字母切碎/裁切问题。\n\n## 安装与兼容提示\n- Windows 提供 NSIS 安装包与便携压缩包；macOS 提供 Universal DMG；Linux 提供 amd64 `.deb`；Android 标准版按 ABI 提供已签名 APK（`versionCode=2002010`）；iOS 提供未签名 `.ipa`（需自行签名安装）。\n- 覆盖安装保留本机收藏、观看记录、界面语言、线路与内容偏好；Android TV 版（`com.hghubx.tv`）同步发布 `tv-v2.2.5` 修复上游 503。\n\n## 致谢\n- 感谢 @makisekurisu-jp 贡献 #248 完结剧集「全 N 集」展示、#252 标签页与标签结果页置顶功能，以及 #250 搜索页热门标签不同步的根因定位与建议。\n- 感谢 @zxsos 完成 #256 上游 `dx150-edge-v1` 加密网关紧急适配、#246 网络切换静默恢复、#249 窄屏中英文布局修复、#251 移动端右半屏长按倍速胶囊与 #254 搜索页热门标签同步。\n- 感谢 `enjue` 提出 #247 常用标签快速入口与长按倍速提示反馈。\n\n## 验证\n- 合入后本地严检：`make check`（Rust `124 passed; 0 failed; 5 ignored`、`pnpm build` 三套 `tsc` + Vite 构建、827 项 i18n 键校验、226 条文档链接、代码尺寸预算及 `release-check: ok 2.2.10, android versionCode=2002010`）、`pnpm test:smoke`（18/18 套件通过）、`node scripts/test-tag-pins.mjs`（11 项通过）与 `make test-tv` + `node scripts/test-tv-remote.mjs`（14/14 场景通过）全部通过。\n- 实网四作用域联调（`cargo test --lib edge_crypto::tests::live_dx150_edge_all_four_scopes -- --ignored` 对 `https://huangguoai.com`）：`public`、`dynamic`、`playback`、`user` 四个加密通道均握手与加解密通过。\n- PR #246、#248、#249、#251、#252、#254、#256 均在 GitHub Actions 审查检查（8/8）全绿通过后合入；各平台正式产物由 `v2.2.10` 标签触发的 GitHub Actions `Release` 工作流构建并校验。",
-          "downloadURL": "https://github.com/zxsos/HGhubX/releases/download/v2.2.10/HGhubX_2.2.10_ios.ipa",
-          "size": 4048150,
+          "version": "3.0.0",
+          "date": "2026-11-26T14:16:54Z",
+          "localizedDescription": "# HGhubX v3.0.0\r\n\r\nHGhubX 3.0 正式版：视频内容改由可导入的视频源提供，支持多来源切换与手机、TV 局域网同步，并完成收藏筛选、缓存清理、扫码等多项体验升级；覆盖 Windows、macOS、Linux、Android 与 iOS。\r\n\r\n## 新增与优化\r\n1. **视频源插件系统与离线示例试用**：支持扫码、`hghubx://` 深链、剪贴板口令、HTTPS 链接及本地文件导入，提供切换、回滚、连通性测试及每次进入静默检查更新（60 秒冷却）；无源引导页提供「试用离线示例源」与顶部一键「移除示例源」，可零网络预览界面，随时一键移除。\r\n2. **「我的收藏」组合筛选与下拉刷新（#278）**：将收藏筛选拆分为「观看状态（不限 / 未看完 / 已看完）」与「连载状态（不限 / 连载中 / 已完结）」两轴正交交集，实时联动计数并统一三道杠筛选图标；新增顶部下拉刷新手势与「刷新收藏」按钮，同步检查更新部数与新增集数。\r\n3. **手机与 TV 局域网双向同步配对**：支持手机「扫一扫」识别 TV 二维码或 4 位配对码直连电视端，同步视频源配置、本机收藏/观看记录、内容偏好与常用播放设置；桌面端不再显示 TV 连接与扫码同步入口。\r\n4. **作者目录、标签页与列表加载提速**：作者目录首屏第 1 页即刻渲染并在后台 4 并发补齐分页；「标签」「专题」与搜索页「热门题材」接入按源与线路隔离的本地缓存，二次进入秒开并后台静默刷新；优化源存储并发读写性能。\r\n5. **真实跨平台缓存清理与最高无上限档位**：支持 `128 MB`、`256 MB`、`512 MB`、`1 GB` 与「无上限」5 档调节，真实统计并清理跨端缓存文件（Windows / macOS / Linux / Android / iOS），完整保留登录态、收藏、观看记录与偏好设置。\r\n6. **扫码画质与对焦升级**：「扫一扫」升级 1080p/720p 高清优先流与主后置镜头识别，支持连续自动对焦、点击画面对焦、多镜头「切镜头」切换以及硬件 `BarcodeDetector` 直连解码。\r\n7. **界面细节与包体积优化**：「关于 HGhubX」弹窗换回正式应用 Logo；去掉视频源导入框冗长提示；开启 Android `.so` 与资源压缩及播放器按需拆包，安装包体积大幅减小（Android `arm64` 约 `5.3 MB`）。\r\n\r\n## 修复\r\n1. **切换视频源后封面正常但播放失败**：从离线示例源导入或切换视频源后，推荐流可能停留在旧源条目、播放能力未及时刷新，需要再导入一次才能播放；现在切源后首页、搜索、分类按新源重新加载，播放地址在能力就绪后自动获取。\r\n2. **剪贴板「粘贴」权限不足**：开放原生剪贴板读取能力并统一走原生插件读取，解决部分端拦截网页粘贴的问题。\r\n3. **分类页功能布局与排行榜/标签排版**：恢复完整能力门控入口并修正紧凑双格按钮对齐与文字错位。\r\n4. **iOS 侧载「文件损坏」与插件连接池（#261、#266）**：补齐 iOS 未签包 ad-hoc 签名与权限/深链配置；为源请求接入复用连接池与受控 DoH 回退，改善部分网络下的误报失败。\r\n\r\n## 安装与兼容提示\r\n- Windows 提供 NSIS 安装包与便携压缩包；macOS 提供 Universal DMG；Linux 提供 amd64 `.deb` 与 `.rpm`；Android 提供按 ABI 分包签名 APK（`versionCode=3000000`）；iOS 提供已 ad-hoc 签名的 `.ipa`（需自行重签侧载安装）。\r\n- 从 2.x 升级后首次启动需导入视频源（也可先试用离线示例源）；既有本地收藏、观看记录与偏好设置均予保留。\r\n- 从 3.0 预发布版可直接覆盖安装。\r\n\r\n## 致谢\r\n- 感谢 @makisekurisu-jp、@zxsos 与所有社区反馈者对本版本的贡献。\r\n\r\n## 验证\r\n- 发版前本地完成 `pnpm build`（三套 TypeScript + Vite 构建）、`check-i18n`、`check-doc-links`、`check-size-budgets`、`check-version-sync`、`check-shell-purity`、`make test-tv`、`pnpm test:smoke`（18/18）与 `test-tv-remote`（14/14 场景）；Rust 源码自 3.0.0-pre.2 起无改动，Rust 检查与单元测试由 GitHub Actions `CI` 工作流执行，全平台产物由 GitHub Actions `Release` 工作流构建。",
+          "downloadURL": "https://github.com/zxsos/HGhubX/releases/download/v3.0.0/HGhubX_3.0.0_ios.ipa",
+          "size": 4865415,
           "minOSVersion": "15.0"
         }
       ],
-      "version": "2.2.10",
-      "versionDate": "2026-11-24T10:16:05Z",
-      "size": 4048150,
-      "downloadURL": "https://github.com/zxsos/HGhubX/releases/download/v2.2.10/HGhubX_2.2.10_ios.ipa",
+      "version": "3.0.0",
+      "versionDate": "2026-11-26T14:16:54Z",
+      "size": 4865415,
+      "downloadURL": "https://github.com/zxsos/HGhubX/releases/download/v3.0.0/HGhubX_3.0.0_ios.ipa",
       "minOSVersion": "15.0"
     },
     {
@@ -189,18 +189,18 @@
       "tintColor": "#FA5371",
       "versions": [
         {
-          "version": "1.6b37",
-          "date": "2026-11-26T05:52:52Z",
-          "localizedDescription": "### 更新内容\n\n- **修复 MissAV 播放失效（双端）**：优先使用 `missav.live` 镜像，自动提取脚本中的实际 `*.surrit.com` 视频 CDN（优先 `c.surrit.com`，替代已超时的 `surrit.mrstcdn.store`），并将镜像站的流媒体 `Referer`/`Origin` 归一化为 `https://missav.live` 避免 403；同步更新内置 `missav.idjplugin` 至 `v1.0.1`。\n- **修复 iOS 小说翻页底部缺行**：将 `.ignoresSafeArea()` 移至 `.frame(maxWidth:)` 外层，并在 `NovelPagerController.viewDidLayoutSubviews()` 按实际正文区尺寸校验分页，避免覆盖/仿真/滑动翻页裁掉底部 3～4 行。\n- **修复 iOS 插件订阅无法安装 `.idjplugin`**：`PluginInstaller.prepare(manifestURL:)` 现自动识别 `.idjplugin` 整包（上限 2 MB）与裸 `manifest.json`，并在订阅列表支持一键更新。\n- **优化安卓内置成人插件入口**：将「推荐插件（App 内置）」移至「已安装」正下方，并在「片源管理」开启成人开关后直接展示内置插件快捷入口。\n- **正式版发布流程**：CI 自动发布工作流默认发布正式版（不再标记为 Pre-release）。\n\n---\n包内版本为 1.6 build 37。IPA 未签名（最低 iOS 16），请自行重签侧载。\n\n请选择 Assets 中的 APK / IPA，不要下载 Source code。SHA-256 见附件。\n构建源码：31ced1313f1b62ea40cf73c375879a68f77a5e70\n自动构建：https://github.com/my-name-is-alan/iDuanJu/actions/runs/45762421727",
-          "downloadURL": "https://github.com/my-name-is-alan/iDuanJu/releases/download/v1.6b37/STV-1.6b37-unsigned.ipa",
-          "size": 54756118,
+          "version": "1.6b41",
+          "date": "2026-11-26T14:44:55Z",
+          "localizedDescription": "i短剧 iOS 1.6b41 (v1.6b41)\n\n包内版本为 1.6 build 41。IPA 未签名（最低 iOS 16），请自行重签侧载。\n\n请选择 Assets 中的 APK / IPA，不要下载 Source code。SHA-256 见附件。\n构建源码：2fe0b4969274cca1eccd8697af1a6f4fe82ddb4f\n自动构建：https://github.com/my-name-is-alan/iDuanJu/actions/runs/45838169992",
+          "downloadURL": "https://github.com/my-name-is-alan/iDuanJu/releases/download/v1.6b41/STV-1.6b41-unsigned.ipa",
+          "size": 54330260,
           "minOSVersion": "16.0"
         }
       ],
-      "version": "1.6b37",
-      "versionDate": "2026-11-26T05:52:52Z",
-      "size": 54756118,
-      "downloadURL": "https://github.com/my-name-is-alan/iDuanJu/releases/download/v1.6b37/STV-1.6b37-unsigned.ipa",
+      "version": "1.6b41",
+      "versionDate": "2026-11-26T14:44:55Z",
+      "size": 54330260,
+      "downloadURL": "https://github.com/my-name-is-alan/iDuanJu/releases/download/v1.6b41/STV-1.6b41-unsigned.ipa",
       "minOSVersion": "16.0"
     },
     {
@@ -264,18 +264,18 @@
       "tintColor": "#1E8FC7",
       "versions": [
         {
-          "version": "0.9.20",
-          "date": "2026-11-21T21:41:37Z",
-          "localizedDescription": "> **Requires:** iOS 26.0 – 26.7.2, or iOS 27.0 up to 27.3 beta 1. **Not supported:** iOS 27.3 beta 2 and later, where Apple patched worse_query. Tested on iOS 27.0.1, 27.2.1, 27.3 beta 1 (confirmed by a user) and 26.7.1; see [Tested devices](https://github.com/kolbicz/WQFiles#tested-devices).\n> **Needs:** a sideloading tool that keeps the App Group entitlement; see [Signing](https://github.com/kolbicz/WQFiles#signing-the-app-group) in the README.\n\n# Worse Query Files 0.9.20\n\nApps Manager backups, and safer handling of databases that are in use.\n\n## New\n\n- **Import Apps Manager backups** ([#19](https://github.com/kolbicz/WQFiles/issues/19)): **Apps** → tap the app → **Import as Backup…** now accepts `.adbk` files from Apps Manager. The app's data is saved as a normal WQ Files backup, ready to restore.\n  - Only the app's own data folder is imported. App Group data in the file isn't, because WQ Files backups don't include App Groups. The keychain items Apps Manager saves are encrypted, so they can't be imported either. When you import, WQ Files lists what it left out.\n  - If the file says it belongs to a different app than the one you tapped, WQ Files asks first, as with any other import.\n  - Opening an `.adbk` from the Files app or the share sheet doesn't start an import; start it from Apps.\n\n## Fixed\n\n- **Files another app is using:** deleting or replacing them, for example an app's database in its App Group while the app runs, failed with \"Resource temporarily unavailable (errno 35)\". WQ Files now says another app is using the file and that quitting that app and trying again should work. Its extensions or widgets can keep the file open even after you quit it.\n- **Databases in use stay intact:** an app's database comes with `-wal` and `-shm` files next to it, and while the app runs, iOS doesn't lock the `-wal` file. WQ Files could delete or replace it while refusing the database file, which lost the app's newest data. Now a database and its `-wal`, `-shm` and `-journal` files are only changed together: if one of them is in use, none of them is touched. This applies to deleting (also whole folders), replacing on import and editing.\n- **Deleting or importing several files at once:** each database is handled before its `-wal` and `-shm` files, which are skipped if the database itself couldn't be deleted or replaced. \"N of M files were imported\" is translated now.\n\n## Credit\n\nNew design: GpGp700. Sandbox technique: [worse_query](https://github.com/forcequitOS/worse_query) by Taj C (forcequit). Container enumeration: [KAMUI](https://github.com/murk-sus/kamui-escape) by murk-sus. Resumable scans: hhh2210. Custom inspectors idea: deltaII. Translations: iosrxwy and FrogTool (Simplified Chinese), kinboy56 (Japanese), hfip (Arabic), hooray804 (Korean), Reinascape (Russian), romlayvn-93 (Vietnamese), buraakkcayir (Turkish review). Thanks to braless for the Apps Manager sample, and to everyone who sent screenshots and Logs. GPL-3.0-or-later.\n\nSHA-256 of WQFiles.ipa: `9ddfa3c1ff01de4d76f601d3b6b76390436136d529f029b9bfaa48c501cfe197`",
-          "downloadURL": "https://github.com/kolbicz/WQFiles/releases/download/v0.9.20/WQFiles.ipa",
-          "size": 2199929,
+          "version": "0.9.30",
+          "date": "2026-11-26T11:23:07Z",
+          "localizedDescription": "> **Requires:** iOS 26.0 – 26.7.2, or iOS 27.0 up to 27.3 beta 1. **Not supported:** iOS 27.3 beta 2 and later, where Apple patched worse_query. Tested on iOS 27.0.1, 27.2.1, 27.3 beta 1 (confirmed by a user) and 26.7.1; see [Tested devices](https://github.com/kolbicz/WQFiles#tested-devices).\n> **Needs:** a sideloading tool that keeps the App Group entitlement; see [Signing](https://github.com/kolbicz/WQFiles#signing-the-app-group) in the README.\n\n# Worse Query Files 0.9.30\n\nShortcuts actions, and a round of fixes after a full review of the code: safer restores and imports, fewer hangs, and faster lists.\n\n## New\n\n- **Shortcuts actions:** WQ Files now adds actions to the Shortcuts app, for shortcuts and automations.\n  - **Files:** List Folder, Get File, Save File, Copy, Move, Rename, New Folder and Delete. They take full paths and work in any app's container, like the file browser.\n  - **Apps:** Clean App Caches and Back Up App Data, by bundle identifier. Clean App Caches also takes the identifier of an app extension, as the Cache Cleaner lists them.\n  - List Folder and Get File always work. Everything that changes files needs **Settings → Allow Shortcuts to Change Files**, which is off until you turn it on. Deleting and cleaning also need **Allow Deleting**.\n  - The actions follow the app's rules: deleted files go to Recently Deleted, a replaced file is kept in Backups, and nothing is replaced by accident: Copy and Save File give \"Name 2\" for a name that is taken, and Move, Rename and New Folder refuse it.\n  - An action that had to wait more than 20 seconds because WQ Files was busy is not run, so nothing is changed after Shortcuts has reported a failure.\n  - Most action names and descriptions in the Shortcuts app are in English for now.\n  - See [Shortcuts](https://github.com/kolbicz/WQFiles#shortcuts) in the README.\n- **Cache Cleaner:** the long-press menu of an app has **Copy Bundle ID**, handy for the Shortcuts actions.\n\n## Fixed\n\n### Files and folders\n\n- **Sort by Size:** when folder sizes finished measuring, the list was put in the new order but the rows on screen weren't. A tap, a swipe to delete or the long-press menu could then act on a different item than the row showed. The rows follow the order now.\n- **Folder sizes after an error:** after pulling down on a folder that first couldn't be listed, sizes were not measured until you left and came back.\n- **Folders with é, ü, Korean or similar characters in their path** could leave the access cache stuck, so every folder was refused until **Settings → Reset Access Cache**. They open normally now, and a cache that is already stuck is repaired on its own.\n- **Folders WQ Files couldn't open** were sometimes reported as cleaned or deleted, with nothing removed. They are reported as not accessible.\n- **Pictures over 4 MB** showed cut off, or as a hex dump. They are read whole and scaled down for viewing.\n- **Alphabet index** with Folders on Top listed its letters out of order in folders that hold both folders and files.\n- **Container roots and WQ Files' own backup folders** could be moved or renamed in the file browser. They are refused, as deleting them already was.\n- **Renaming, moving or uploading a file to a `-wal` or `-journal` name** next to a database another app has open is refused, as creating one already was.\n- **Importing several files with Keep Both:** when a database got a new name (\"db 2.sqlite\"), its `-wal` and `-shm` files kept their old names and landed next to the database that was already there, which could damage it. They now get the same new name.\n\n### Apps and backups\n\n- **Import as Backup:** on some devices nothing could be selected in the Files sheet ([#72](https://github.com/kolbicz/WQFiles/issues/72)). It now asks first whether you want to pick a file or a folder, and writes to the Log what the Files sheet returned.\n- **An interrupted restore that can't be undone** (the app was removed or reinstalled since, or its safety backup was deleted) blocked every restore of every app, with the same message at each launch. It is closed with a note that says where the data from before is.\n- **Imported backups with only Documents or only Library:** restoring one emptied the other folder of the app. It is left as it is now, and the import says when a folder is missing.\n- **Import as Backup** says how many symbolic links in the ZIP were left out, instead of calling the result verified without a word.\n- **A restore that was refused before it started** left a full \"Before restore\" copy of the app behind while saying nothing was changed.\n- **Selecting backups to delete:** a checked backup couldn't be unchecked.\n- **Cache Cleaner:** rows you unchecked were checked again by the rescan that starts on its own after 10 minutes or after cleaning. They stay unchecked; pull down to start over.\n- **Recently Deleted:** a database is restored together with its `-wal` and `-shm` files or not at all. Before, a failed restore could still leave the database in place. A `-wal` that was deleted together with its database now comes back with it; before, the database was restored without its latest changes.\n- **Apps reinstalled or updated since the app database was written:** the app's icon, its installed/offloaded state and **Open App Bundle** could point at the bundle of an earlier install. The bundle that exists is used.\n- **Your own Cache Cleaner entries** were offered as \"Add to Cache Cleaner\" again in the file browser after the app was reinstalled. They are recognised by app.\n- **An interrupted restore** could be closed at launch as \"app removed\" when the app's folder only couldn't be seen yet. Access is asked for before that is decided.\n\n### Viewers and editors\n\n- **Custom inspectors:** a faulty script could close WQ Files, or keep every later inspector waiting behind it. Scripts are stopped after about twice the time limit in total, and a replacement that doesn't load puts the inspector from before back. Where iOS offers no time limit for scripts, inspectors are not run.\n- **Syntax colors** stopped at the first very long text value (for example an embedded image in JSON), and a CSS file with a large embedded image could take minutes. Both are colored quickly and completely.\n- **SQLite:**\n  - Tapping **Edit** on a large database froze WQ Files until all row counts were done.\n  - A whole number too large for the database was stored as a different number without a warning.\n  - Scripts whose later statements need the earlier ones (create a table, then fill it) were refused.\n  - Scrolling far into a large table got slower with every page.\n- **Property lists:** negative numbers and numbers with \"e\" couldn't be typed into a Real value on iPhone, and \"1,5\" was refused in regions that write decimals with a comma.\n- **Hex editor on iPad:** changing bytes after rotating or resizing the window could close WQ Files.\n\n### Wi-Fi Sharing\n\n- The sharing screen now says that the connection is **not encrypted**: others on the same network can read the password and the files, so share only on a network you trust.\n- An upload is refused at the start when the device doesn't have room for it, and only one ZIP is prepared at a time, so a browser can't fill the device's storage.\n- A browser that connects and then sends nothing no longer holds a connection for good.\n\n### Start screen and settings\n\n- **Check for Updates** never reported a new version: it looked for the version in the wrong place of the update list. Versions after this one are announced on the start screen.\n- **Sharing Password** in the new design's Settings kept showing the old state after it was changed.\n- **Theme export:** the temporary copy stayed until the next launch after sharing.\n- **Reopen Last Folder** was skipped when the \"Not everything works here\" notice was shown.\n- **Switching New Design** after a failed access check showed \"Access check passed\", and hid the update notice until the next launch.\n- **App Store Icons:** turning the setting on had no effect on lists that were already loaded. Turning it off stops the requests that are under way.\n- **Themes** named \"Default\" or \"Color\" could be imported but never used.\n- **The scan question** (\"Scan all files?\") could disappear without an answer and leave the Apps and Cache scans waiting until WQ Files was restarted.\n\n## Faster\n\n- **Interrupted scans resume:** measuring an app's folder started from the beginning after every interruption. It continues where it stopped.\n- **Less memory** while measuring, cleaning, backing up and restoring large apps.\n- **Sharing a folder** no longer holds up folder listings and the Apps and Cache scans while the ZIP is made.\n- **Backup folders** and the **Backed Up** filter read the disk once per listing, not on every tap and keystroke.\n\n## Housekeeping\n\n- Temporary copies left behind when WQ Files was closed by iOS (database copies, uploads, ZIPs) are removed at the next launch.\n- The in-app Log keeps the newest lines, about 1 MB, and says how many earlier lines it left out.\n\n## Credit\n\nNew design: GpGp700. Sandbox technique: [worse_query](https://github.com/forcequitOS/worse_query) by Taj C (forcequit). Container enumeration: [KAMUI](https://github.com/murk-sus/kamui-escape) by murk-sus. Resumable scans: hhh2210. Custom inspectors idea: deltaII. Translations: iosrxwy and FrogTool (Simplified Chinese), kinboy56 (Japanese), hfip (Arabic), hooray804 (Korean), Reinascape (Russian), romlayvn-93 (Vietnamese), buraakkcayir (Turkish review). Thanks to everyone who sent screenshots and Logs. GPL-3.0-or-later.\n\nSHA-256 of WQFiles.ipa: `28deac3c001962a0431532644452efdba24d97c1913a5d9193f5339aba7b9a11`",
+          "downloadURL": "https://github.com/kolbicz/WQFiles/releases/download/v0.9.30/WQFiles.ipa",
+          "size": 2268148,
           "minOSVersion": "26.0"
         }
       ],
-      "version": "0.9.20",
-      "versionDate": "2026-11-21T21:41:37Z",
-      "size": 2199929,
-      "downloadURL": "https://github.com/kolbicz/WQFiles/releases/download/v0.9.20/WQFiles.ipa",
+      "version": "0.9.30",
+      "versionDate": "2026-11-26T11:23:07Z",
+      "size": 2268148,
+      "downloadURL": "https://github.com/kolbicz/WQFiles/releases/download/v0.9.30/WQFiles.ipa",
       "minOSVersion": "26.0"
     },
     {
@@ -305,15 +305,48 @@
   ],
   "news": [
     {
+      "appID": "app.bamboo3965.leo5976",
+      "title": "APP 2.8.8 · 26 Nov 2026",
+      "identifier": "APP-release-2.8.8",
+      "caption": "APP 2.8.8 is available.",
+      "date": "2026-11-26T16:17:23Z",
+      "tintColor": "#52B788",
+      "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/APP/images/news.png",
+      "notify": true,
+      "url": "https://github.com/pxx917144686/APP/releases/tag/2.8.8"
+    },
+    {
       "appID": "com.local.STV",
-      "title": "i短剧 1.6b37 · 26 Nov 2026",
-      "identifier": "i短剧-release-v1.6b37",
-      "caption": "i短剧 1.6b37 is available.",
-      "date": "2026-11-26T05:52:52Z",
+      "title": "i短剧 1.6b41 · 26 Nov 2026",
+      "identifier": "i短剧-release-v1.6b41",
+      "caption": "i短剧 1.6b41 is available.",
+      "date": "2026-11-26T14:44:55Z",
       "tintColor": "#FA5371",
       "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/iDuanJu/images/news.png",
       "notify": true,
-      "url": "https://github.com/my-name-is-alan/iDuanJu/releases/tag/v1.6b37"
+      "url": "https://github.com/my-name-is-alan/iDuanJu/releases/tag/v1.6b41"
+    },
+    {
+      "appID": "com.hghubx.app",
+      "title": "HGhubX 3.0.0 · 26 Nov 2026",
+      "identifier": "HGhubX-release-v3.0.0",
+      "caption": "HGhubX 3.0.0 is available.",
+      "date": "2026-11-26T14:16:54Z",
+      "tintColor": "#60CDFF",
+      "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/added/HGhubX/images/news.png",
+      "notify": true,
+      "url": "https://github.com/zxsos/HGhubX/releases/tag/v3.0.0"
+    },
+    {
+      "appID": "cz.kolbi.wqfiles",
+      "title": "WQ Files 0.9.30 · 26 Nov 2026",
+      "identifier": "WQ Files-release-v0.9.30",
+      "caption": "WQ Files 0.9.30 is available.",
+      "date": "2026-11-26T11:23:07Z",
+      "tintColor": "#1E8FC7",
+      "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/WQFiles/images/news.png",
+      "notify": true,
+      "url": "https://github.com/kolbicz/WQFiles/releases/tag/v0.9.30"
     },
     {
       "appID": "com.gopeed.gopeed",
@@ -327,17 +360,6 @@
       "url": "https://github.com/GopeedLab/gopeed/releases/tag/v2.0.0"
     },
     {
-      "appID": "app.bamboo3965.leo5976",
-      "title": "APP 2.8.2 · 25 Nov 2026",
-      "identifier": "APP-release-2.8.2",
-      "caption": "APP 2.8.2 is available.",
-      "date": "2026-11-25T20:09:56Z",
-      "tintColor": "#52B788",
-      "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/APP/images/news.png",
-      "notify": true,
-      "url": "https://github.com/pxx917144686/APP/releases/tag/2.8.2"
-    },
-    {
       "appID": "com.jbdotparty.Erosion",
       "title": "Erosion-CN 1.0.7 · 25 Nov 2026",
       "identifier": "Erosion-CN-release-v1.0.7",
@@ -349,17 +371,6 @@
       "url": "https://github.com/Kianuni/Erosion-CN/releases/tag/v1.0.7"
     },
     {
-      "appID": "com.hghubx.app",
-      "title": "HGhubX 2.2.10 · 24 Nov 2026",
-      "identifier": "HGhubX-release-v2.2.10",
-      "caption": "HGhubX 2.2.10 is available.",
-      "date": "2026-11-24T10:16:05Z",
-      "tintColor": "#60CDFF",
-      "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/added/HGhubX/images/news.png",
-      "notify": true,
-      "url": "https://github.com/zxsos/HGhubX/releases/tag/v2.2.10"
-    },
-    {
       "appID": "com.taoo.xiutu",
       "title": "穷图 0.4 · 23 Nov 2026",
       "identifier": "穷图-release-v0.4",
@@ -369,17 +380,6 @@
       "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/Qiongtu/images/news.png",
       "notify": true,
       "url": "https://github.com/iam567/qiongtu/releases/tag/v0.4"
-    },
-    {
-      "appID": "cz.kolbi.wqfiles",
-      "title": "WQ Files 0.9.20 · 21 Nov 2026",
-      "identifier": "WQ Files-release-v0.9.20",
-      "caption": "WQ Files 0.9.20 is available.",
-      "date": "2026-11-21T21:41:37Z",
-      "tintColor": "#1E8FC7",
-      "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/WQFiles/images/news.png",
-      "notify": true,
-      "url": "https://github.com/kolbicz/WQFiles/releases/tag/v0.9.20"
     },
     {
       "appID": "com.mori.downloader",
