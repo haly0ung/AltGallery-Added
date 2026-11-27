@@ -16,18 +16,18 @@
       "tintColor": "#52B788",
       "versions": [
         {
-          "version": "2.8.9",
-          "date": "2026-11-27T01:06:10Z",
-          "localizedDescription": "#修改\r\n\r\n```js\r\n\r\n1.改进：签名功能\r\n\r\n```",
-          "downloadURL": "https://gh-proxy.com/https://github.com/pxx917144686/APP/releases/download/2.8.9/APP_2.8.9.ipa",
-          "size": 54481500,
+          "version": "2.9.1",
+          "date": "2026-11-27T18:47:05Z",
+          "localizedDescription": "#修改\r\n\r\n```js\r\n\r\n1.改进：大文件（游戏APP）下载导致崩溃问题\r\n2.更新：核对多国语言字符串\r\n3.完善：设置-源代码\r\n\r\n```",
+          "downloadURL": "https://gh-proxy.com/https://github.com/pxx917144686/APP/releases/download/2.9.1/APP_2.9.1.ipa",
+          "size": 54732459,
           "minOSVersion": "17.4"
         }
       ],
-      "version": "2.8.9",
-      "versionDate": "2026-11-27T01:06:10Z",
-      "size": 54481500,
-      "downloadURL": "https://gh-proxy.com/https://github.com/pxx917144686/APP/releases/download/2.8.9/APP_2.8.9.ipa",
+      "version": "2.9.1",
+      "versionDate": "2026-11-27T18:47:05Z",
+      "size": 54732459,
+      "downloadURL": "https://gh-proxy.com/https://github.com/pxx917144686/APP/releases/download/2.9.1/APP_2.9.1.ipa",
       "minOSVersion": "17.4"
     },
     {
@@ -165,18 +165,18 @@
       "tintColor": "#60CDFF",
       "versions": [
         {
-          "version": "3.0.0",
-          "date": "2026-11-26T14:16:54Z",
-          "localizedDescription": "# HGhubX v3.0.0\r\n\r\nHGhubX 3.0 正式版：视频内容改由可导入的视频源提供，支持多来源切换与手机、TV 局域网同步，并完成收藏筛选、缓存清理、扫码等多项体验升级；覆盖 Windows、macOS、Linux、Android 与 iOS。\r\n\r\n## 新增与优化\r\n1. **视频源插件系统与离线示例试用**：支持扫码、`hghubx://` 深链、剪贴板口令、HTTPS 链接及本地文件导入，提供切换、回滚、连通性测试及每次进入静默检查更新（60 秒冷却）；无源引导页提供「试用离线示例源」与顶部一键「移除示例源」，可零网络预览界面，随时一键移除。\r\n2. **「我的收藏」组合筛选与下拉刷新（#278）**：将收藏筛选拆分为「观看状态（不限 / 未看完 / 已看完）」与「连载状态（不限 / 连载中 / 已完结）」两轴正交交集，实时联动计数并统一三道杠筛选图标；新增顶部下拉刷新手势与「刷新收藏」按钮，同步检查更新部数与新增集数。\r\n3. **手机与 TV 局域网双向同步配对**：支持手机「扫一扫」识别 TV 二维码或 4 位配对码直连电视端，同步视频源配置、本机收藏/观看记录、内容偏好与常用播放设置；桌面端不再显示 TV 连接与扫码同步入口。\r\n4. **作者目录、标签页与列表加载提速**：作者目录首屏第 1 页即刻渲染并在后台 4 并发补齐分页；「标签」「专题」与搜索页「热门题材」接入按源与线路隔离的本地缓存，二次进入秒开并后台静默刷新；优化源存储并发读写性能。\r\n5. **真实跨平台缓存清理与最高无上限档位**：支持 `128 MB`、`256 MB`、`512 MB`、`1 GB` 与「无上限」5 档调节，真实统计并清理跨端缓存文件（Windows / macOS / Linux / Android / iOS），完整保留登录态、收藏、观看记录与偏好设置。\r\n6. **扫码画质与对焦升级**：「扫一扫」升级 1080p/720p 高清优先流与主后置镜头识别，支持连续自动对焦、点击画面对焦、多镜头「切镜头」切换以及硬件 `BarcodeDetector` 直连解码。\r\n7. **界面细节与包体积优化**：「关于 HGhubX」弹窗换回正式应用 Logo；去掉视频源导入框冗长提示；开启 Android `.so` 与资源压缩及播放器按需拆包，安装包体积大幅减小（Android `arm64` 约 `5.3 MB`）。\r\n\r\n## 修复\r\n1. **切换视频源后封面正常但播放失败**：从离线示例源导入或切换视频源后，推荐流可能停留在旧源条目、播放能力未及时刷新，需要再导入一次才能播放；现在切源后首页、搜索、分类按新源重新加载，播放地址在能力就绪后自动获取。\r\n2. **剪贴板「粘贴」权限不足**：开放原生剪贴板读取能力并统一走原生插件读取，解决部分端拦截网页粘贴的问题。\r\n3. **分类页功能布局与排行榜/标签排版**：恢复完整能力门控入口并修正紧凑双格按钮对齐与文字错位。\r\n4. **iOS 侧载「文件损坏」与插件连接池（#261、#266）**：补齐 iOS 未签包 ad-hoc 签名与权限/深链配置；为源请求接入复用连接池与受控 DoH 回退，改善部分网络下的误报失败。\r\n\r\n## 安装与兼容提示\r\n- Windows 提供 NSIS 安装包与便携压缩包；macOS 提供 Universal DMG；Linux 提供 amd64 `.deb` 与 `.rpm`；Android 提供按 ABI 分包签名 APK（`versionCode=3000000`）；iOS 提供已 ad-hoc 签名的 `.ipa`（需自行重签侧载安装）。\r\n- 从 2.x 升级后首次启动需导入视频源（也可先试用离线示例源）；既有本地收藏、观看记录与偏好设置均予保留。\r\n- 从 3.0 预发布版可直接覆盖安装。\r\n\r\n## 致谢\r\n- 感谢 @makisekurisu-jp、@zxsos 与所有社区反馈者对本版本的贡献。\r\n\r\n## 验证\r\n- 发版前本地完成 `pnpm build`（三套 TypeScript + Vite 构建）、`check-i18n`、`check-doc-links`、`check-size-budgets`、`check-version-sync`、`check-shell-purity`、`make test-tv`、`pnpm test:smoke`（18/18）与 `test-tv-remote`（14/14 场景）；Rust 源码自 3.0.0-pre.2 起无改动，Rust 检查与单元测试由 GitHub Actions `CI` 工作流执行，全平台产物由 GitHub Actions `Release` 工作流构建。",
-          "downloadURL": "https://gh-proxy.com/https://github.com/zxsos/HGhubX/releases/download/v3.0.0/HGhubX_3.0.0_ios.ipa",
-          "size": 4865415,
+          "version": "3.1.2",
+          "date": "2026-11-27T19:01:14Z",
+          "localizedDescription": "# HGhubX v3.1.2\n\nHGhubX 3.1.2 正式版：正式纳入 HarmonyOS 鸿蒙未签名安装包（自签可用），新增视频加载 DNS 并发竞速与 Rust 媒体代理层 HLS 后台并发预取，统一全端网络、视频源与播放器错误代号层，并修复安卓端返回退出后重新打开闪退与切后台继续拉流问题；覆盖 Windows、macOS、Linux、Android、iOS 与 HarmonyOS。\n\n## 新增与优化\n1. **正式纳入 HarmonyOS 鸿蒙自签版（#283）**：同步标准版全部功能与界面，随本版同步提供 `HGhubX_3.1.2_ohos_arm64_unsigned.hap` 未签名安装包；前端自动识别 HarmonyOS 平台，内置更新检查支持优先匹配 `.hap` 产物。\n2. **视频加载与首播提速**：\n   - 底层客户端构建与域名解析引入同主机 single-flight 合并与 900ms 系统 DNS / 阿里 DoH 并发竞速（保留严格模式既有 IP 与重定向安全校验），降低冷启动并发排队与弱网 DNS 阻塞。\n   - Rust 媒体代理层新增 HLS 后台并发预取：解析播放列表后即并发预热加密 Key、初始化片段与前 2 个分片，播放期间按当前分片自动预取后续 `N+1` / `N+2` 分片（全局并发限流 3，切线、切集或清缓存即时取消），显著提升起播与续播缓冲速度。\n3. **统一错误代号层与历史同步自动重试**：\n   - 后端网络请求、视频源脚本与播放器错误统一收口为带语义代号的可读提示（如 `NET_TIMEOUT`、`NET_DNS`、`NET_PROXY`、`HTTP_*`、`SRC_*`、`MEDIA_*`），不再向界面直接暴露原始英文报错、请求 URL 或 QuickJS `eval_script` 调用栈。\n   - 「观看历史」接口（`api_account_history`）纳入只读瞬态超时自动重试，减少「我的」页同步失败。\n4. **桌面端与移动端 UI/UX 全面打磨**：\n   - 桌面端按面板容器宽度自适应至 960px（有效宽度增至 ~904px，频道/标签/帖子/「我的」统一 5 列对齐），分类快捷入口收敛为单行 5 卡均分，横向片架新增边缘渐隐与悬停翻页按钮，侧栏进入二级页保留来源高亮，根级「设置」「排行榜」去冗余返回键，设置分组新增图标与实时状态摘要且双选择器等宽对齐。\n   - 移动端横向片架通栏延展消除右侧截断感，修复浅色主题帖子操作胶囊对比度与「我的」页「视频/帖子」激活态反转，收紧圆角至 12 / 20 / 28px 三档，统一所有抽屉 44px 关闭键、描线图标与滚动标题分隔线，播放异常卡片上移并升级毛玻璃胶囊，排序/筛选菜单选中项满足 WCAG AA（≥ 4.5:1）对比度。\n\n## 修复\n1. **安卓端返回退出后重新打开闪退**：根页面双击返回直接触发 `finishAffinity()` 后，延迟的 `onDestroy()` 进程退出逻辑会在短时间重开时误杀新实例 -> 改为通过安卓原生桥调用 `moveTaskToBack(true)` 退回后台，避免重开闪退。\n2. **应用切入后台后仍继续拉取视频分片**：退回后台时播放器未及时停流导致后台流量消耗与恢复状态错乱 -> 监听页面不可见事件同步暂停并调用 `hls.stopLoad()`，回到前台后按原播放意图或显式暂停状态恢复。\n3. **详情/选集抽屉滑动方向错乱与滑到相关推荐后无法滚动**：强制横屏旋转态（`.fs-landscape`）下，选集无法右滑回详情、详情下滑会误切选集，且详情上滑至「相关推荐」后整页卡死无法回滑 -> 为 `PanelSwipeArea` 补齐 90° 旋转坐标换算、主轴锁定、横向 `preventDefault` 与 click 抑制，并在旋转态对调 `.scroll-x` 的 `overscroll-behavior` 轴向以恢复纵向滚动链。\n4. **图文帖子仍显示未来时间**：部分帖子排期/置顶或异常时间戳穿透显示为未来日期 -> 将有效时间上限收紧至当前时间 + 5 分钟并对全部日期时间格式执行严格校验，自动跳过未来值回退有效字段或隐藏。\n5. **各页面弹出菜单返回键穿透与滑切后误吞点击**：频道排序、标签状态、作品状态、收藏筛选与桌面倍速菜单展开时按 `Escape` 或安卓返回键可能直接退页/退全屏，排行榜/频道/帖子滑切后 360ms 内立即点「返回」或卡片会被吞掉，帖子页横滑易误点进详情 -> 统一为全部弹出菜单补齐 `registerOverlayBack` 与捕获阶段 `Escape` 拦截（含 `inert` 与内嵌全屏让步），并在每次新触摸/指针按下时清除上一次滑切遗留的 click 抑制窗口，统一 `PostsPage` 至 `useTabSwipe` 并修复「我的」页下拉刷新 `touchcancel` 误触发。\n\n## 安装与兼容提示\n- Windows 提供 NSIS 安装包与便携压缩包；macOS 提供 Universal DMG；Linux 提供 amd64 `.deb` 与 `.rpm`；Android 提供按 ABI 分包签名 APK（`versionCode=3001002`）；iOS 提供已 ad-hoc 签名的 `.ipa`（需自行重签侧载安装）；HarmonyOS 提供未签名的 `HGhubX_3.1.2_ohos_arm64_unsigned.hap`（需自行签名后安装）。\n- 支持从 `v3.0.0` / `v3.1.1` 直接覆盖安装，所有已导入的视频源、收藏、观看记录与偏好设置均予保留。\n\n## 致谢\n- 感谢 @zxsos 与所有参与安卓闪退排查、鸿蒙自签实测与加载提速验证的社区成员。\n\n## 验证\n- 本地完成 `pnpm build`、`VITE_APP_EDITION=tv pnpm build`、`pnpm test:smoke`（22/22）、`node scripts/test-tv-remote.mjs`（14/14）、`check-i18n`（947 条）、`check-doc-links`、`check-size-budgets`、`check-shell-purity`、`check-version-sync`（`3.1.2` / `versionCode=3001002`）、`patch-ohos-cargo.mjs` 幂等校验，以及安卓退后台/后台停流、统一错误代号层、旋转抽屉滑动/相关推荐回滑与未来时间拦截先红后绿回归验证；GitHub Actions `CI`、`TV CI` 与 `Release` 工作流执行全量测试与全平台构建发布。",
+          "downloadURL": "https://gh-proxy.com/https://github.com/zxsos/HGhubX/releases/download/v3.1.2/HGhubX_3.1.2_ios.ipa",
+          "size": 5216729,
           "minOSVersion": "15.0"
         }
       ],
-      "version": "3.0.0",
-      "versionDate": "2026-11-26T14:16:54Z",
-      "size": 4865415,
-      "downloadURL": "https://gh-proxy.com/https://github.com/zxsos/HGhubX/releases/download/v3.0.0/HGhubX_3.0.0_ios.ipa",
+      "version": "3.1.2",
+      "versionDate": "2026-11-27T19:01:14Z",
+      "size": 5216729,
+      "downloadURL": "https://gh-proxy.com/https://github.com/zxsos/HGhubX/releases/download/v3.1.2/HGhubX_3.1.2_ios.ipa",
       "minOSVersion": "15.0"
     },
     {
@@ -329,6 +329,28 @@
   ],
   "news": [
     {
+      "appID": "com.hghubx.app",
+      "title": "HGhubX 3.1.2 · 27 Nov 2026",
+      "identifier": "HGhubX-release-v3.1.2",
+      "caption": "HGhubX 3.1.2 is available.",
+      "date": "2026-11-27T19:01:14Z",
+      "tintColor": "#60CDFF",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/added/HGhubX/images/news.png",
+      "notify": true,
+      "url": "https://github.com/zxsos/HGhubX/releases/tag/v3.1.2"
+    },
+    {
+      "appID": "app.bamboo3965.leo5976",
+      "title": "APP 2.9.1 · 27 Nov 2026",
+      "identifier": "APP-release-2.9.1",
+      "caption": "APP 2.9.1 is available.",
+      "date": "2026-11-27T18:47:05Z",
+      "tintColor": "#52B788",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/APP/images/news.png",
+      "notify": true,
+      "url": "https://github.com/pxx917144686/APP/releases/tag/2.9.1"
+    },
+    {
       "appID": "wow.caicai.coda",
       "title": "Coda 0.1.3 · 27 Nov 2026",
       "identifier": "Coda-release-v0.1.3",
@@ -340,17 +362,6 @@
       "url": "https://github.com/Wow-CaiCai/Coda/releases/tag/v0.1.3"
     },
     {
-      "appID": "app.bamboo3965.leo5976",
-      "title": "APP 2.8.9 · 27 Nov 2026",
-      "identifier": "APP-release-2.8.9",
-      "caption": "APP 2.8.9 is available.",
-      "date": "2026-11-27T01:06:10Z",
-      "tintColor": "#52B788",
-      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/APP/images/news.png",
-      "notify": true,
-      "url": "https://github.com/pxx917144686/APP/releases/tag/2.8.9"
-    },
-    {
       "appID": "com.local.STV",
       "title": "i短剧 1.6b41 · 26 Nov 2026",
       "identifier": "i短剧-release-v1.6b41",
@@ -360,17 +371,6 @@
       "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/iDuanJu/images/news.png",
       "notify": true,
       "url": "https://github.com/my-name-is-alan/iDuanJu/releases/tag/v1.6b41"
-    },
-    {
-      "appID": "com.hghubx.app",
-      "title": "HGhubX 3.0.0 · 26 Nov 2026",
-      "identifier": "HGhubX-release-v3.0.0",
-      "caption": "HGhubX 3.0.0 is available.",
-      "date": "2026-11-26T14:16:54Z",
-      "tintColor": "#60CDFF",
-      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/added/HGhubX/images/news.png",
-      "notify": true,
-      "url": "https://github.com/zxsos/HGhubX/releases/tag/v3.0.0"
     },
     {
       "appID": "cz.kolbi.wqfiles",
