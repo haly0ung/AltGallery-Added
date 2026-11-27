@@ -16,18 +16,18 @@
       "tintColor": "#52B788",
       "versions": [
         {
-          "version": "2.9.9",
+          "version": "2.8.9",
           "date": "2026-11-27T01:06:10Z",
           "localizedDescription": "#修改\r\n\r\n```js\r\n\r\n1.改进：签名功能\r\n\r\n```",
-          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.9.9/APP_2.9.9.ipa",
+          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.8.9/APP_2.8.9.ipa",
           "size": 54481500,
           "minOSVersion": "17.4"
         }
       ],
-      "version": "2.9.9",
+      "version": "2.8.9",
       "versionDate": "2026-11-27T01:06:10Z",
       "size": 54481500,
-      "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.9.9/APP_2.9.9.ipa",
+      "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.8.9/APP_2.8.9.ipa",
       "minOSVersion": "17.4"
     },
     {
@@ -306,14 +306,14 @@
   "news": [
     {
       "appID": "app.bamboo3965.leo5976",
-      "title": "APP 2.9.9 · 27 Nov 2026",
-      "identifier": "APP-release-2.9.9",
-      "caption": "APP 2.9.9 is available.",
+      "title": "APP 2.8.9 · 27 Nov 2026",
+      "identifier": "APP-release-2.8.9",
+      "caption": "APP 2.8.9 is available.",
       "date": "2026-11-27T01:06:10Z",
       "tintColor": "#52B788",
       "imageURL": "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/apps/APP/images/news.png",
       "notify": true,
-      "url": "https://github.com/pxx917144686/APP/releases/tag/2.9.9"
+      "url": "https://github.com/pxx917144686/APP/releases/tag/2.8.9"
     },
     {
       "appID": "com.local.STV",
