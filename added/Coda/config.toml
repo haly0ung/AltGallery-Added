@@ -1,0 +1,44 @@
+# altgen config for the Coda AltStore source.
+# Run: uvx altgen -c config.toml
+# Coda: native SwiftUI music client (NetEase Cloud Music, QQ Music, Kugou, Qishui)
+#
+# NOTE: this app lives in added/ (not apps/) — small-source-only.
+# Only the added-apps workflow regenerates and merges it into added-apps.json.
+# NOTE: the release IPA is UNSIGNED — sign with your own certificate in your
+# signer before installing.
+
+[github]
+repo = "Wow-CaiCai/Coda"
+
+[source]
+name = "Coda"
+subtitle = "Coda AltStore source by AltGallery & AltGen"
+description = "Auto-updated AltStore source for Coda"
+icon_url = "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/added/Coda/icon.png"
+website = "https://github.com/Wow-CaiCai/Coda"
+tint_color = "#EC4949"
+
+[app]
+name = "Coda"
+bundle_identifier = "wow.caicai.coda"
+developer_name = "Wow-CaiCai"
+subtitle = "多平台原生音乐客户端 · Native music client"
+description = "原生播放、歌词、歌单与多平台账号管理，各音乐服务支持的功能不同。安装前需对 IPA 签名。"
+icon_url = "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/added/Coda/icon.png"
+tint_color = "#EC4949"
+min_os_version = "16.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# asset_pattern is a regex (not glob): each iOS release ships Coda-iOS-<version>.ipa.
+# The Mac zip (Coda-<version>.zip) and altstore.json are never matched here.
+asset_pattern = 'Coda-iOS-.*\.ipa$'
+
+[news]
+title_template = "{name} {version} · {date}"
+# shared promo image rendered by tools/render_news.py
+image_url = "https://raw.githubusercontent.com/haly0ung/AltGallery-Added/refs/heads/master/added/Coda/images/news.png"
+
+[output]
+path = "apps.json"
