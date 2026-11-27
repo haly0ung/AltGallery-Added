@@ -17,9 +17,10 @@ on:
       - 'apps/Erosion-CN/**'
       - 'apps/Camlo/**'
       - 'apps/APP/**'
-      - 'apps/iDuanJu/**'      
+      - 'apps/iDuanJu/**'
       - 'apps/Qiongtu/**'
       - 'added/HGhubX/**'
+      - 'added/Coda/**'
       - 'assets/added-merge.toml'
       - 'tools/**'
       - '.github/workflows/added-apps.yml'
@@ -40,7 +41,7 @@ jobs:
       - name: Regenerate the added app sources
         run: |
           set -euo pipefail
-           for dir in apps/Gopeed apps/Cloudn apps/WQFiles apps/One apps/INSAV apps/Mori apps/Erosion-CN apps/Camlo apps/APP apps/iDuanJu apps/Qiongtu  added/HGhubX; do
+          for dir in apps/Gopeed apps/Cloudn apps/WQFiles apps/One apps/INSAV apps/Mori apps/Erosion-CN apps/Camlo apps/APP apps/iDuanJu apps/Qiongtu  added/HGhubX added/Coda; do
             echo "==> Updating $dir"
             (cd "$dir" && uvx altgen -c config.toml)
           done
@@ -48,7 +49,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Merge into added-apps.json
-        run: uvx altgen merge -c assets/added-merge.toml apps/Gopeed/apps.json apps/Cloudn/apps.json apps/WQFiles/apps.json apps/One/apps.json apps/INSAV/apps.json apps/Mori/apps.json apps/Erosion-CN/apps.json apps/Camlo/apps.json apps/APP/apps.json apps/iDuanJu/apps.json apps/Qiongtu/apps.json added/HGhubX/apps.json
+        run: uvx altgen merge -c assets/added-merge.toml apps/Gopeed/apps.json apps/Cloudn/apps.json apps/WQFiles/apps.json apps/One/apps.json apps/INSAV/apps.json apps/Mori/apps.json apps/Erosion-CN/apps.json apps/Camlo/apps.json apps/APP/apps.json apps/iDuanJu/apps.json apps/Qiongtu/apps.json added/HGhubX/apps.json added/Coda/apps.json
       # altgen does not emit a root identifier or sourceURL, but the AltStore
       # source format (and TrollStore, which reads the same format) requires
       # both — without identifier TrollStore rejects the source as an invalid
